@@ -2,7 +2,7 @@ import Image from 'next/image'
 
 export default function TokenUtility() {
   return (
-    <section className="-mt-32 lg:-mt-32 relative overflow-hidden bg-black">
+    <section className="-mt-32 lg:-mt-32 relative overflow-hidden bg-transparent">
       <div className="container-1400 relative z-10">
         {/* Section Header */}
         <div className="text-center mb-16">
@@ -23,7 +23,7 @@ export default function TokenUtility() {
           {/* Cards Grid - Top two cards side by side */}
           <div className="grid lg:grid-cols-2 gap-8 mb-8">
             {/* Earn for Compute - Float in from left */}
-            <div className="bg-white/[0.03] rounded-2xl p-8 transition-all duration-300 group opacity-0 animate-slide-in-left">
+            <div className="bg-white/[0.05] backdrop-blur-sm rounded-2xl p-8 transition-all duration-300 group opacity-0 animate-slide-in-left">
               <div className="flex items-center space-x-6">
                 {/* Text Content - Left Side */}
                 <div className="flex-1">
@@ -51,7 +51,7 @@ export default function TokenUtility() {
             </div>
 
             {/* Passive Income Potential - Float in from right */}
-            <div className="bg-white/[0.03] rounded-2xl p-8 transition-all duration-300 group opacity-0 animate-slide-in-right">
+            <div className="bg-white/[0.05] backdrop-blur-sm rounded-2xl p-8 transition-all duration-300 group opacity-0 animate-slide-in-right">
               <div className="flex items-center space-x-6">
                 {/* Text Content - Left Side */}
                 <div className="flex-1">
@@ -81,7 +81,7 @@ export default function TokenUtility() {
 
           {/* Staking Unlocks More - Float in from bottom */}
           <div className="flex justify-center">
-            <div className="bg-white/[0.03] rounded-2xl p-8 transition-all duration-300 group opacity-0 animate-slide-in-bottom max-w-2xl">
+            <div className="bg-white/[0.05] backdrop-blur-sm rounded-2xl p-8 transition-all duration-300 group opacity-0 animate-slide-in-bottom max-w-2xl">
               <div className="flex items-center space-x-6">
                 {/* Text Content - Left Side */}
                 <div className="flex-1">

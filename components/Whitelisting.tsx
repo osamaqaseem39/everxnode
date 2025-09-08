@@ -2,7 +2,7 @@ import Image from 'next/image'
 
 export default function Whitelisting() {
   return (
-    <section className="py-12 relative">
+    <section className="py-12 relative bg-transparent">
       {/* Subtle Background Gradient */}
       <div className="absolute inset-0 bg-gradient-to-r from-[#D799FE3D]/5 via-transparent to-[#D799FE3D]/5"></div>
       
@@ -32,17 +32,15 @@ export default function Whitelisting() {
         {/* Feature Cards */}
         <div className="flex justify-center gap-8 mb-12 relative z-10">
           {/* Card 1: Premium Reward Multipliers */}
-          <div className="w-[470px] h-[400px] bg-black backdrop-blur-sm border border-[#D799FE3D] rounded-2xl p-8 hover:border-[#D799FE] hover:shadow-2xl hover:shadow-[#D799FE]/20 transition-all duration-300 group flex flex-col lg:-mt-20">
+          <div className="w-[470px] h-[400px] bg-black border border-[#D799FE3D] rounded-2xl p-8 hover:border-[#D799FE] hover:shadow-2xl hover:shadow-[#D799FE]/20 transition-all duration-300 group flex flex-col lg:-mt-20">
             <div className="text-center mb-6">
-              <div className="w-16 h-16 bg-white/[0.1] rounded-xl flex items-center justify-center mx-auto mb-12">
-                <Image 
-                  src="/mod.png" 
-                  alt="Mod icon" 
-                  width={32} 
-                  height={32}
-                  className="w-8 h-8"
-                />
-              </div>
+              <Image 
+                src="/wcard1.png" 
+                alt="Mod icon" 
+                width={64} 
+                height={64}
+                className=" mx-auto mb-12"
+              />
             </div>
             <h3 className="text-[24px] font-extralight text-white items-center text-center mb-6 leading-relaxed flex-grow">
               Premium Reward Multipliers For Early Node Operators
@@ -51,17 +49,15 @@ export default function Whitelisting() {
           </div>
 
           {/* Card 2: Guaranteed Allocation */}
-          <div className="w-[470px] h-[400px] bg-black backdrop-blur-sm border border-[#D799FE3D] rounded-2xl p-8 hover:border-[#D799FE] hover:shadow-2xl hover:shadow-[#D799FE]/20 transition-all duration-300 group flex flex-col ">
+          <div className="w-[470px] h-[400px] bg-black border border-[#D799FE3D] rounded-2xl p-8 hover:border-[#D799FE] hover:shadow-2xl hover:shadow-[#D799FE]/20 transition-all duration-300 group flex flex-col ">
             <div className="text-center mb-6">
-              <div className="w-16 h-16 bg-white/[0.1] rounded-xl flex items-center justify-center mx-auto mb-12">
-                <Image 
-                  src="/lock.png" 
-                  alt="Lock icon" 
-                  width={32} 
-                  height={32}
-                  className="w-8 h-8"
-                />
-              </div>
+              <Image 
+                src="/wcard2.png" 
+                alt="Lock icon" 
+                width={64} 
+                height={64}
+                className=" mx-auto mb-12"
+              />
             </div>
             <h3 className="text-[24px] font-extralight text-white items-center text-center mb-6 leading-relaxed flex-grow">
               Guaranteed Allocation Before Public Sales
@@ -70,17 +66,15 @@ export default function Whitelisting() {
           </div>
 
           {/* Card 3: Limited NFT Licenses */}
-          <div className="w-[470px] h-[400px] bg-black backdrop-blur-sm border border-[#D799FE3D] rounded-2xl p-8 hover:border-[#D799FE] hover:shadow-2xl hover:shadow-[#D799FE]/20 transition-all duration-300 group flex flex-col lg:-mt-20">
+          <div className="w-[470px] h-[400px] bg-black border border-[#D799FE3D] rounded-2xl p-8 hover:border-[#D799FE] hover:shadow-2xl hover:shadow-[#D799FE]/20 transition-all duration-300 group flex flex-col lg:-mt-20">
             <div className="text-center mb-6">
-              <div className="w-16 h-16 bg-white/[0.1] rounded-xl flex items-center justify-center mx-auto mb-12">
-                <Image 
-                  src="/eye.png" 
-                  alt="Eye icon" 
-                  width={32} 
-                  height={24}
-                  className="w-8 h-8"
-                />
-              </div>
+              <Image 
+                src="/wcard3.png" 
+                alt="Eye icon" 
+                width={64} 
+                height={64}
+                className="mx-auto mb-12"
+              />
             </div>
             <h3 className="text-[24px] font-extralight text-white items-center text-center mb-6 leading-relaxed flex-grow">
               Access To Limited NFT Licenses (Scarcity = Value)

@@ -1,50 +1,91 @@
 export default function ContactHero() {
   return (
-    <section className="min-h-screen bg-black relative overflow-hidden flex items-center">
+    <section className="min-h-screen bg-gradient-to-bl from-cyan-900 via-black to-pink-900 relative overflow-hidden">
       {/* Background Glows */}
       <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-[#D799FE3D] rounded-full blur-3xl opacity-20"></div>
       <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-[#D799FE3D] rounded-full blur-3xl opacity-20"></div>
+      <div className="absolute top-1/2 left-1/6 w-64 h-64 bg-cyan-400/20 rounded-full blur-3xl opacity-30"></div>
+      <div className="absolute bottom-1/3 right-1/6 w-80 h-80 bg-pink-400/15 rounded-full blur-3xl opacity-25"></div>
+      <div className="absolute top-1/6 right-1/3 w-72 h-72 bg-purple-400/20 rounded-full blur-3xl opacity-20"></div>
+      <div className="absolute bottom-1/6 left-1/3 w-56 h-56 bg-blue-400/15 rounded-full blur-3xl opacity-25"></div>
       
-      <div className="container-1400 w-full relative z-10">
+      {/* Top Right Glows */}
+      <div className="absolute top-0 right-0 w-96 h-96 bg-[#D799FE3D] rounded-full blur-3xl opacity-30"></div>
+      <div className="absolute top-8 right-8 w-32 h-32 bg-[#D799FE3D] rounded-full blur-2xl opacity-40"></div>
+      <div className="absolute top-16 right-24 w-20 h-20 bg-cyan-400/25 rounded-full blur-xl opacity-30"></div>
+      <div className="absolute top-24 right-12 w-16 h-16 bg-pink-400/20 rounded-full blur-lg opacity-25"></div>
+      <div className="absolute top-12 right-32 w-12 h-12 bg-purple-400/15 rounded-full blur-md opacity-20"></div>
+      
+      <div className="container-1400 w-full relative z-10 py-20">
+        {/* Section Header */}
+        <div className="text-center mb-16">
+          <h2 className="text-[48px] lg:text-[64px] font-medium text-white mb-2">
+            Contact Us
+          </h2>
+          <p className="text-[40px] font-thin text-white max-w-7xl mx-auto mb-8">
+            Get in touch with our team for any questions or inquiries.
+          </p>
+        </div>
+
+        {/* Top Buttons */}
+        <div className="flex flex-col items-center mb-16">
+          <div className="flex gap-8">
+            <button className="bg-white/[0.03] backdrop-blur-sm border border-white/10 rounded-full px-8 py-4 text-white text-lg font-medium shadow-lg shadow-[#D799FE3D] hover:bg-white/[0.05] hover:border-white/20 hover:shadow-xl hover:shadow-[#D799FE4D] transition-all duration-300 transform hover:scale-105">
+              DISCORD
+            </button>
+            <button className="bg-white/[0.03] backdrop-blur-sm border border-white/10 rounded-full px-8 py-4 text-white text-lg font-medium shadow-lg shadow-[#D799FE3D] hover:bg-white/[0.05] hover:border-white/20 hover:shadow-xl hover:shadow-[#D799FE4D] transition-all duration-300 transform hover:scale-105">
+              TWITTER
+            </button>
+            <button className="bg-white/[0.03] backdrop-blur-sm border border-white/10 rounded-full px-8 py-4 text-white text-lg font-medium shadow-lg shadow-[#D799FE3D] hover:bg-white/[0.05] hover:border-white/20 hover:shadow-xl hover:shadow-[#D799FE4D] transition-all duration-300 transform hover:scale-105">
+              INSTAGRAM
+            </button>
+          </div>
+        </div>
+
         <div className="grid lg:grid-cols-2 gap-16 items-center">
-          {/* Left Side - Retro Computer */}
+          {/* Left Side - Spiral Image */}
           <div className="relative">
-            <div className="relative w-full h-[500px] flex items-center justify-center">
-              {/* Retro Computer Base */}
-              <div className="relative w-80 h-96">
-                {/* Monitor Screen */}
-                <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-64 h-48 bg-gradient-to-br from-[#D799FE] via-purple-500 to-pink-400 rounded-lg shadow-2xl shadow-[#D799FE3D] transform rotate-12">
-                  {/* Screen Reflection */}
-                  <div className="absolute inset-0 bg-gradient-to-br from-transparent via-white/20 to-transparent rounded-lg"></div>
-                  {/* Screen Border */}
-                  <div className="absolute inset-0 border-2 border-[#D799FE] rounded-lg"></div>
-                </div>
+            <div className="relative w-full h-[600px] flex items-center justify-center">
+              {/* Spiral Image with Glow Effects */}
+              <div className="relative w-full h-full max-w-2xl max-h-2xl">
+                <img 
+                  src="/spiral.png" 
+                  alt="Spiral" 
+                  className="w-full h-full object-contain relative z-10"
+                />
                 
-                {/* Computer Base */}
-                <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-72 h-32 bg-gradient-to-br from-[#D799FE] via-purple-600 to-blue-500 rounded-lg shadow-2xl shadow-[#D799FE3D]">
-                  {/* Floppy Disk Slot */}
-                  <div className="absolute top-4 left-8 w-16 h-8 bg-black/30 rounded-sm border border-[#D799FE]"></div>
-                  {/* Buttons */}
-                  <div className="absolute top-4 right-8 flex space-x-2">
-                    <div className="w-4 h-4 bg-[#D799FE] rounded-full shadow-lg"></div>
-                    <div className="w-4 h-4 bg-purple-400 rounded-full shadow-lg"></div>
-                    <div className="w-4 h-4 bg-blue-400 rounded-full shadow-lg"></div>
-                  </div>
-                </div>
+                {/* Purple Glow */}
+                <div className="absolute inset-0 w-full h-full bg-[#D799FE3D] rounded-full blur-3xl opacity-60"></div>
                 
-                {/* Glow Effects */}
-                <div className="absolute inset-0 w-full h-full bg-[#D799FE3D] rounded-full blur-3xl opacity-40 animate-pulse"></div>
+                {/* Teal Glow */}
+                <div className="absolute inset-0 w-full h-full bg-cyan-400/20 rounded-full blur-3xl opacity-40"></div>
+                
+                {/* Additional Glow Effects */}
+                <div className="absolute inset-0 w-full h-full bg-[#D799FE3D] rounded-full blur-3xl opacity-30 animate-pulse"></div>
+                <div className="absolute inset-0 w-full h-full bg-cyan-400/10 rounded-full blur-3xl opacity-20 animate-pulse"></div>
               </div>
+              
+              {/* Additional Glow Elements Around Spiral */}
+              <div className="absolute top-8 left-8 w-20 h-20 bg-pink-400/20 rounded-full blur-2xl opacity-30 animate-pulse"></div>
+              <div className="absolute bottom-12 right-12 w-16 h-16 bg-blue-400/15 rounded-full blur-xl opacity-25 animate-pulse"></div>
+              <div className="absolute top-1/2 -left-4 w-12 h-12 bg-purple-400/20 rounded-full blur-lg opacity-20 animate-pulse"></div>
+              <div className="absolute top-1/4 -right-6 w-14 h-14 bg-cyan-400/15 rounded-full blur-lg opacity-25 animate-pulse"></div>
             </div>
           </div>
 
           {/* Right Side - Contact Form */}
-          <div className="bg-gray-900/80 border border-gray-800 rounded-2xl p-8 backdrop-blur-sm">
-            <h2 className="text-3xl font-bold text-white mb-8 text-center">
-              Your Detail
-            </h2>
+          <div className="bg-white/[0.03] border border-white/10 rounded-2xl p-8 backdrop-blur-sm relative">
+            {/* Form Glow Effects */}
+            <div className="absolute inset-0 bg-gradient-to-r from-[#D799FE3D]/10 via-transparent to-[#D799FE3D]/10 rounded-2xl"></div>
+            <div className="absolute -top-4 -left-4 w-32 h-32 bg-[#D799FE3D] rounded-full blur-2xl opacity-40"></div>
+            <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-cyan-400/20 rounded-full blur-2xl opacity-30"></div>
+            <div className="absolute top-1/2 -right-8 w-16 h-16 bg-pink-400/15 rounded-full blur-xl opacity-25"></div>
             
-            <form className="space-y-6">
+            <h3 className="text-2xl font-medium text-white mb-8 relative z-10">
+              Your Detail
+            </h3>
+            
+            <form className="space-y-6 relative z-10">
               {/* Name and Email Row */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>

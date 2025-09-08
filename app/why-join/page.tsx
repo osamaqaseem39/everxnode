@@ -6,4 +6,4 @@ export default function WhyJoinPage() {
       <WhyJoin />
     </main>
   )
-} 
+}

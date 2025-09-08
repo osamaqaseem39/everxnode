@@ -1,6 +1,6 @@
 export default function LicensingTiersV2() {
   return (
-    <section className="py-24 relative overflow-hidden">
+    <section className="py-24 relative overflow-hidden bg-gradient-to-t from-black via-purple-900 to-black">
       {/* Subtle Background Glows */}
       <div className="absolute top-0 left-0 w-96 h-96 bg-[#D799FE3D] rounded-full blur-3xl opacity-10"></div>
       <div className="absolute bottom-0 right-0 w-96 h-96 bg-[#D799FE3D] rounded-full blur-3xl opacity-10"></div>

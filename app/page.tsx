@@ -4,7 +4,6 @@ import Whitelisting from '@/components/Whitelisting'
 import NFTLicensing from '@/components/NFTLicensing'
 import LicensingTiers from '@/components/LicensingTiers'
 import AboutUs from '@/components/AboutUs'
-import LicensingTiersV2 from '@/components/LicensingTiersV2'
 import CTABanner from '@/components/CTABanner'
 
 export default function Home() {
@@ -16,7 +15,6 @@ export default function Home() {
       <NFTLicensing />
       <LicensingTiers />
       <CTABanner />
-     
     </main>
   )
 } 
