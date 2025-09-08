@@ -2,12 +2,12 @@ import Image from 'next/image'
 
 export default function Whitelisting() {
   return (
-    <section className="py-12 relative bg-transparent">
+    <section className="py-12 relative bg-transparent overflow-x-hidden">
       {/* Subtle Background Gradient */}
       <div className="absolute inset-0 bg-gradient-to-r from-[#D799FE3D]/5 via-transparent to-[#D799FE3D]/5"></div>
       
       {/* Purple Strip Behind Cards - Full Width */}
-      <div className="absolute left-0 right-0 w-screen h-[100px] bg-[#D799FE] z-10" style={{top: '600px', marginLeft: 'calc(-50vw + 50%)'}}></div>
+      <div className="absolute left-0 right-0 w-full h-[100px] bg-[#D799FE] z-10" style={{top: '600px'}}></div>
       
       <div className="container-1400 relative z-10">
         {/* Section Header */}
@@ -30,9 +30,9 @@ export default function Whitelisting() {
         </div>
         
         {/* Feature Cards */}
-        <div className="flex justify-center gap-8 mb-12 relative z-10">
+        <div className="flex flex-col lg:flex-row justify-center gap-8 mb-12 relative z-10  ">
           {/* Card 1: Premium Reward Multipliers */}
-          <div className="w-[470px] h-[400px] bg-black border border-[#D799FE3D] rounded-2xl p-8 hover:border-[#D799FE] hover:shadow-2xl hover:shadow-[#D799FE]/20 transition-all duration-300 group flex flex-col lg:-mt-20">
+          <div className="w-full max-w-[470px] h-[400px] bg-black border border-[#D799FE3D] rounded-2xl p-8 hover:border-[#D799FE] hover:shadow-2xl hover:shadow-[#D799FE]/20 transition-all duration-300 group flex flex-col lg:-mt-20">
             <div className="text-center mb-6">
               <Image 
                 src="/wcard1.png" 
@@ -49,7 +49,7 @@ export default function Whitelisting() {
           </div>
 
           {/* Card 2: Guaranteed Allocation */}
-          <div className="w-[470px] h-[400px] bg-black border border-[#D799FE3D] rounded-2xl p-8 hover:border-[#D799FE] hover:shadow-2xl hover:shadow-[#D799FE]/20 transition-all duration-300 group flex flex-col ">
+          <div className="w-full max-w-[470px] h-[400px] bg-black border border-[#D799FE3D] rounded-2xl p-8 hover:border-[#D799FE] hover:shadow-2xl hover:shadow-[#D799FE]/20 transition-all duration-300 group flex flex-col ">
             <div className="text-center mb-6">
               <Image 
                 src="/wcard2.png" 
@@ -66,7 +66,7 @@ export default function Whitelisting() {
           </div>
 
           {/* Card 3: Limited NFT Licenses */}
-          <div className="w-[470px] h-[400px] bg-black border border-[#D799FE3D] rounded-2xl p-8 hover:border-[#D799FE] hover:shadow-2xl hover:shadow-[#D799FE]/20 transition-all duration-300 group flex flex-col lg:-mt-20">
+          <div className="w-full max-w-[470px] h-[400px] bg-black border border-[#D799FE3D] rounded-2xl p-8 hover:border-[#D799FE] hover:shadow-2xl hover:shadow-[#D799FE]/20 transition-all duration-300 group flex flex-col lg:-mt-20">
             <div className="text-center mb-6">
               <Image 
                 src="/wcard3.png" 

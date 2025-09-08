@@ -3,7 +3,7 @@ import BubbleOverlay from './BubbleOverlay'
 
 export default function TreeVisualization() {
   return (
-    <div className="relative w-full">
+    <div className="relative w-full overflow-x-hidden">
       <div className="relative w-full h-[600px] lg:h-[800px] xl:h-[900px] flex items-center justify-center">
         {/* Tree Image */}
         <div className="relative w-full h-full">

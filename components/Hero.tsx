@@ -5,21 +5,19 @@ export default function Hero() {
   return (
     <section className="min-h-screen flex items-center w-full relative bg-transparent">
       {/* Ellipse 7 - Full width starting from 80% of hero */}
-      <div className="absolute top-[300px] left-0 w-full opacity-100 pointer-events-none z-10">
+      <div className="absolute top-[300px] left-0 w-full opacity-100 pointer-events-none z-10 overflow-hidden">
         <img 
           src="/Ellipse 7.png" 
           alt="Eclipse Glow" 
           className="w-full h-auto object-cover"
         />
-        
       </div>
-      <div className="absolute top-[700px] left-0 w-full opacity-100 pointer-events-none z-10">
+      <div className="absolute top-[700px] left-0 w-full opacity-100 pointer-events-none z-10 overflow-hidden">
         <img 
           src="/Ellipse 8.png" 
           alt="Eclipse Glow" 
           className="w-full h-auto object-cover"
         />
-        
       </div>
       
       <div className="w-full px-4 sm:px-8 md:px-16 lg:px-24">
@@ -44,21 +42,21 @@ export default function Hero() {
             </div>
             
             {/* Connection line to tree */}
-            <div className="hidden lg:block absolute top-[600px] left-[700px] transform -translate-y-1/2">
+            <div className="hidden lg:block absolute top-[600px] right-0 transform -translate-y-1/2 max-w-[600px] overflow-hidden">
               <Image
                 src="/connect.png"
                 alt="Connection Line"
                 width={600}
                 height={40}
-                className="object-contain"
+                className="object-contain max-w-full h-auto"
               />
             </div>
           </div>
 
           {/* Right Side - Tree Visualization */}
-          <div className="relative w-full">
+          <div className="relative w-full overflow-x-hidden">
             {/* Radial glow under the tree */}
-            <div className="absolute top-[400px] left-1/2 transform -translate-x-1/2 w-[800px] h-[400px] opacity-60 pointer-events-none z-0">
+            <div className="absolute top-[400px] left-1/2 transform -translate-x-1/2 w-full max-w-[800px] h-[400px] opacity-60 pointer-events-none z-0 overflow-hidden">
               <div className="w-full h-full bg-radial-gradient from-[#D799FE3D] via-[#D799FE1A] to-transparent rounded-full blur-3xl"></div>
             </div>
             <div className="relative w-full h-[400px] sm:h-[500px] md:h-[700px] lg:h-[1000px] flex items-center justify-center z-5">
@@ -75,7 +73,7 @@ export default function Hero() {
                 {/* Interactive Bubbles Overlay */}
                 <BubbleOverlay
                   text="Provide AI Compute"
-                  position="top-[80px] -left-[100px]"
+                  position="top-[100px] left-[0px]"
                   lineImage="/linesmallinvertedflipped.png"
                   lineWidth={120}
                   lineHeight={40}

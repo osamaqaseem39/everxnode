@@ -15,7 +15,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="font-['Poppins'] relative">
+      <body className="font-['Poppins'] relative overflow-x-hidden">
         {/* Glow circles background */}
         <div className="fixed inset-0 -z-10">
           <div className="absolute -top-40 -left-40 w-[800px] h-[800px] rounded-full opacity-10 blur-3xl" style={{background: '#D799FE'}}></div>

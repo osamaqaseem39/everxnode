@@ -30,15 +30,30 @@ export default function ContactHero() {
         {/* Top Buttons */}
         <div className="flex flex-col items-center mb-16">
           <div className="flex gap-8">
-            <button className="bg-white/[0.03] backdrop-blur-sm border border-white/10 rounded-full px-8 py-4 text-white text-lg font-medium shadow-lg shadow-[#D799FE3D] hover:bg-white/[0.05] hover:border-white/20 hover:shadow-xl hover:shadow-[#D799FE4D] transition-all duration-300 transform hover:scale-105">
+            <a 
+              href="https://discord.gg/vu5c3jn2" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="bg-white/[0.03] backdrop-blur-sm border border-white/10 rounded-full px-8 py-4 text-white text-lg font-medium shadow-lg shadow-[#D799FE3D] hover:bg-white/[0.05] hover:border-white/20 hover:shadow-xl hover:shadow-[#D799FE4D] transition-all duration-300 transform hover:scale-105"
+            >
               DISCORD
-            </button>
-            <button className="bg-white/[0.03] backdrop-blur-sm border border-white/10 rounded-full px-8 py-4 text-white text-lg font-medium shadow-lg shadow-[#D799FE3D] hover:bg-white/[0.05] hover:border-white/20 hover:shadow-xl hover:shadow-[#D799FE4D] transition-all duration-300 transform hover:scale-105">
+            </a>
+            <a 
+              href="https://x.com/EverXNode" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="bg-white/[0.03] backdrop-blur-sm border border-white/10 rounded-full px-8 py-4 text-white text-lg font-medium shadow-lg shadow-[#D799FE3D] hover:bg-white/[0.05] hover:border-white/20 hover:shadow-xl hover:shadow-[#D799FE4D] transition-all duration-300 transform hover:scale-105"
+            >
               TWITTER
-            </button>
-            <button className="bg-white/[0.03] backdrop-blur-sm border border-white/10 rounded-full px-8 py-4 text-white text-lg font-medium shadow-lg shadow-[#D799FE3D] hover:bg-white/[0.05] hover:border-white/20 hover:shadow-xl hover:shadow-[#D799FE4D] transition-all duration-300 transform hover:scale-105">
+            </a>
+            <a 
+              href="https://www.instagram.com/everxnode/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="bg-white/[0.03] backdrop-blur-sm border border-white/10 rounded-full px-8 py-4 text-white text-lg font-medium shadow-lg shadow-[#D799FE3D] hover:bg-white/[0.05] hover:border-white/20 hover:shadow-xl hover:shadow-[#D799FE4D] transition-all duration-300 transform hover:scale-105"
+            >
               INSTAGRAM
-            </button>
+            </a>
           </div>
         </div>
 
