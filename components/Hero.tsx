@@ -42,7 +42,7 @@ export default function Hero() {
             </div>
             
             {/* Connection line to tree */}
-            <div className="hidden lg:block absolute top-[600px] right-0 transform -translate-y-1/2 max-w-[600px] overflow-hidden">
+            <div className="hidden lg:block absolute top-[600px] right-80 transform -translate-y-1/2 max-w-[600px] overflow-hidden">
               <Image
                 src="/connect.png"
                 alt="Connection Line"

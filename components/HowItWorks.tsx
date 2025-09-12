@@ -26,7 +26,7 @@ export default function HowItWorks() {
           {/* Right Side - Process Steps */}
           <div className="space-y-8">
             {/* Section Title */}
-            <h2 className="text-5xl lg:text-6xl font-bold text-white mb-6 text-center">
+            <h2 className="text-5xl lg:text-6xl font-medium text-white mb-6 text-center">
               How It <span className="text-[#D799FE]">Works?</span>
             </h2>
 

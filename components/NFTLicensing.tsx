@@ -8,20 +8,19 @@ export default function NFTLicensing() {
   const img3Ref = useRef<HTMLImageElement>(null);
   const [openCards, setOpenCards] = useState<boolean[]>([false, false, false]);
   const speedsRef = useRef([
-    { ref: img1Ref, normalSpeed: 12000, slowSpeed: 20000, currentSpeed: 12000, isHovered: false, offsetX: 0, offsetY: 0, targetOffsetX: 0, targetOffsetY: 0, rotation: 0, targetRotation: 0 },
-    { ref: img2Ref, normalSpeed: 15000, slowSpeed: 25000, currentSpeed: 15000, isHovered: false, offsetX: 0, offsetY: 0, targetOffsetX: 0, targetOffsetY: 0, rotation: 0, targetRotation: 0 },
-    { ref: img3Ref, normalSpeed: 18000, slowSpeed: 30000, currentSpeed: 18000, isHovered: false, offsetX: 0, offsetY: 0, targetOffsetX: 0, targetOffsetY: 0, rotation: 0, targetRotation: 0 }
+    { ref: img1Ref, normalSpeed: 12000, slowSpeed: 20000, currentSpeed: 12000, isHovered: false, offsetX: 0, offsetY: 0, targetOffsetX: 0, targetOffsetY: 0, rotation: 15, targetRotation: 15 },
+    { ref: img2Ref, normalSpeed: 15000, slowSpeed: 25000, currentSpeed: 15000, isHovered: false, offsetX: 0, offsetY: 0, targetOffsetX: 0, targetOffsetY: 0, rotation: -20, targetRotation: -20 },
+    { ref: img3Ref, normalSpeed: 18000, slowSpeed: 30000, currentSpeed: 18000, isHovered: false, offsetX: 0, offsetY: 0, targetOffsetX: 0, targetOffsetY: 0, rotation: 10, targetRotation: 10 }
   ]);
 
   useEffect(() => {
     let animationId: number;
-    let lastTime = Date.now();
+    let startTime = Date.now();
     const speeds = speedsRef.current;
 
     const animate = () => {
       const currentTime = Date.now();
-      const deltaTime = currentTime - lastTime;
-      lastTime = currentTime;
+      const elapsed = currentTime - startTime;
       
       speeds.forEach((speed, index) => {
         if (speed.ref.current) {
@@ -33,11 +32,17 @@ export default function NFTLicensing() {
           speed.offsetX += (speed.targetOffsetX - speed.offsetX) * 0.15;
           speed.offsetY += (speed.targetOffsetY - speed.offsetY) * 0.15;
           
-          // Smooth rotation effect
+          // Continuous spin animation (2000ms per rotation)
+          const spinRotation = (elapsed / 2000) * 360;
+          
+          // Smooth rotation effect for hover interactions
           speed.rotation += (speed.targetRotation - speed.rotation) * 0.1;
           
+          // Combine spin rotation with hover rotation
+          const totalRotation = spinRotation + speed.rotation;
+          
           // Apply transform with repulsion and rotation
-          speed.ref.current.style.transform = `translate(${speed.offsetX}px, ${speed.offsetY}px) rotate(${speed.rotation}deg)`;
+          speed.ref.current.style.transform = `translate(${speed.offsetX}px, ${speed.offsetY}px) rotate(${totalRotation}deg)`;
         }
       });
       

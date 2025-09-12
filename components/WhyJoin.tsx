@@ -1,6 +1,39 @@
+'use client'
+
 import Link from 'next/link'
+import { useRef, useEffect } from 'react'
 
 export default function WhyJoin() {
+  const icon1Ref = useRef<HTMLImageElement>(null);
+  const icon2Ref = useRef<HTMLImageElement>(null);
+  const icon3Ref = useRef<HTMLImageElement>(null);
+
+  useEffect(() => {
+    let animationId: number;
+    let startTime = Date.now();
+    const iconRefs = [icon1Ref, icon2Ref, icon3Ref];
+
+    const animate = () => {
+      const currentTime = Date.now();
+      const elapsed = currentTime - startTime;
+      
+      iconRefs.forEach((iconRef) => {
+        if (iconRef.current) {
+          // Continuous spin animation (2000ms per rotation)
+          const spinRotation = (elapsed / 4000) * 360;
+          iconRef.current.style.transform = `rotate(${spinRotation}deg)`;
+        }
+      });
+      
+      animationId = requestAnimationFrame(animate);
+    };
+
+    animate();
+
+    return () => {
+      cancelAnimationFrame(animationId);
+    };
+  }, []);
   return (
     <section id="why-join" className="py-24 pt-48 bg-transparent relative overflow-hidden">
       {/* Background Glows */}
@@ -10,8 +43,8 @@ export default function WhyJoin() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-5xl lg:text-6xl font-bold text-white mb-6">
-            Why <span className="text-[#D799FE]">join?</span>
+          <h2 className="text-5xl lg:text-6xl font-medium text-white mb-6">
+            Why <span className="text-[#D799FE]">Join?</span>
           </h2>
         </div>
 
@@ -42,6 +75,7 @@ export default function WhyJoin() {
               <div className="w-48 h-48 relative">
                 <div className="absolute inset-0 flex items-center justify-center">
                   <img 
+                    ref={icon1Ref}
                     src="/polygon.png" 
                     alt="Polygon Rings" 
                     className="w-48 h-48 object-contain filter brightness-110"
@@ -81,6 +115,7 @@ export default function WhyJoin() {
               <div className="w-48 h-48 relative">
                 <div className="absolute inset-0 flex items-center justify-center">
                   <img 
+                    ref={icon2Ref}
                     src="/cubes.png" 
                     alt="Cubes" 
                     className="w-48 h-48 object-contain filter brightness-110"
@@ -116,6 +151,7 @@ export default function WhyJoin() {
               <div className="w-48 h-48 relative">
                 <div className="absolute inset-0 flex items-center justify-center">
                   <img 
+                    ref={icon3Ref}
                     src="/ring.png" 
                     alt="Stack" 
                     className="w-48 h-48 object-contain filter brightness-110"
