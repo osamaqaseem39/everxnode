@@ -62,11 +62,12 @@ export default function Hero() {
             <div className="relative w-full h-[400px] sm:h-[500px] md:h-[700px] lg:h-[1000px] flex items-center justify-center z-5">
               {/* Tree Image with Overlay Bubbles */}
               <div className="relative w-full h-full">
-                <Image
-                  src="/tree.png"
-                  alt="AI Neural Network Tree"
-                  width={900}
-                  height={1000}
+                <video
+                  src="/tree.mp4"
+                  autoPlay
+                  
+                  muted
+                  playsInline
                   className="w-full h-full object-contain"
                 />
                 
