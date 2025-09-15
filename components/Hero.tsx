@@ -3,7 +3,7 @@ import BubbleOverlay from './BubbleOverlay'
 
 export default function Hero() {
   return (
-    <section className="w-full relative bg-transparent py-8 lg:py-16">
+    <section className="w-full relative bg-transparent py-8 sm:py-12 lg:py-16">
       {/* Ellipse 7 - Mobile optimized positioning */}
       <div className="absolute top-[200px] sm:top-[300px] lg:top-[300px] left-0 w-full opacity-100 pointer-events-none z-10 overflow-hidden">
         <img 
@@ -60,7 +60,7 @@ export default function Hero() {
             <div className="absolute top-[200px] sm:top-[300px] lg:top-[400px] left-1/2 transform -translate-x-1/2 w-full max-w-[400px] sm:max-w-[600px] lg:max-w-[800px] h-[200px] sm:h-[300px] lg:h-[400px] opacity-60 pointer-events-none z-0 overflow-hidden">
               <div className="w-full h-full bg-radial-gradient from-[#D799FE3D] via-[#D799FE1A] to-transparent rounded-full blur-3xl"></div>
             </div>
-            <div className="relative w-full min-h-[300px] sm:min-h-[400px] lg:min-h-[550px] flex items-center justify-center z-5 pt-8 sm:pt-12 lg:pt-16">
+            <div className="relative w-full min-h-[400px] sm:min-h-[500px] lg:min-h-[550px] flex items-center justify-center z-5 pt-4 sm:pt-8 lg:pt-16 pb-4 sm:pb-8 lg:pb-0">
               {/* Tree Image with Overlay Bubbles */}
               <div className="relative w-full h-full flex items-center justify-center">
                 {/* Mobile: Show image, Large+: Show video */}
@@ -69,7 +69,7 @@ export default function Hero() {
                   alt="Tree Visualization"
                   width={800}
                   height={600}
-                  className="w-full max-w-full h-auto object-contain lg:hidden"
+                  className="w-full max-w-full h-auto object-contain lg:hidden min-h-[350px] sm:min-h-[450px]"
                 />
                 <video
                   src="/tree.mp4"
@@ -80,33 +80,35 @@ export default function Hero() {
                   className="w-full max-w-full h-auto object-contain hidden lg:block"
                 />
                 
-                {/* Interactive Bubbles Overlay - Mobile optimized */}
-                <BubbleOverlay
-                  text="Provide AI Compute"
-                  position="top-[50px] sm:top-[70px] lg:top-[90px] left-[10px] sm:left-[10px] lg:left-[10px]"
-                  lineImage="/linesmallinvertedflipped.png"
-                  lineWidth={80}
-                  lineHeight={30}
-                  linePosition="top-[15px] sm:top-[25px] lg:top-[25px] left-[120px] sm:left-[150px] lg:left-[180px]"
-                />
+                {/* Interactive Bubbles Overlay - Hidden on mobile, shown on sm+ */}
+                <div className="hidden sm:block">
+                  <BubbleOverlay
+                    text="Provide AI Compute"
+                    position="top-[60px] sm:top-[80px] lg:top-[90px] left-[5px] sm:left-[10px] lg:left-[10px]"
+                    lineImage="/linesmallinvertedflipped.png"
+                    lineWidth={80}
+                    lineHeight={30}
+                    linePosition="top-[15px] sm:top-[25px] lg:top-[25px] left-[100px] sm:left-[130px] lg:left-[180px]"
+                  />
 
-                <BubbleOverlay
-                  text="Earn Rewards"
-                  position="top-[110px] sm:top-[150px] lg:top-[190px] right-[10px] sm:right-[10px] lg:right-[10px]"
-                  lineImage="/linesmall.png"
-                  lineWidth={80}
-                  lineHeight={30}
-                  linePosition="top-[15px] sm:top-[25px] lg:top-[25px] right-[100px] sm:right-[120px] lg:right-[140px]"
-                />
+                  <BubbleOverlay
+                    text="Earn Rewards"
+                    position="top-[130px] sm:top-[170px] lg:top-[190px] right-[5px] sm:right-[10px] lg:right-[10px]"
+                    lineImage="/linesmall.png"
+                    lineWidth={80}
+                    lineHeight={30}
+                    linePosition="top-[15px] sm:top-[25px] lg:top-[25px] right-[80px] sm:right-[110px] lg:right-[140px]"
+                  />
 
-                <BubbleOverlay
-                  text="Join the Revolution"
-                  position="top-[190px] sm:top-[270px] lg:top-[340px] left-[50px] sm:left-[80px] lg:left-[100px] transform"
-                  lineImage="/linesmallinverted.png"
-                  lineWidth={80}
-                  lineHeight={30}
-                  linePosition="top-[-5px] lg:top-[-5px] left-[130px] sm:left-[160px] lg:left-[185px]"
-                />
+                  <BubbleOverlay
+                    text="Join the Revolution"
+                    position="top-[220px] sm:top-[300px] lg:top-[340px] left-[30px] sm:left-[60px] lg:left-[100px] transform"
+                    lineImage="/linesmallinverted.png"
+                    lineWidth={80}
+                    lineHeight={30}
+                    linePosition="top-[-5px] lg:top-[-5px] left-[110px] sm:left-[140px] lg:left-[185px]"
+                  />
+                </div>
               </div>
             </div>
           </div>

@@ -6,7 +6,7 @@ export default function NFTLicensing() {
   const img1Ref = useRef<HTMLImageElement>(null);
   const img2Ref = useRef<HTMLImageElement>(null);
   const img3Ref = useRef<HTMLImageElement>(null);
-  const [openCards, setOpenCards] = useState<boolean[]>([false, false, false]);
+  const [openCards, setOpenCards] = useState<boolean[]>([true, true, true]);
   const speedsRef = useRef([
     { ref: img1Ref, normalSpeed: 12000, slowSpeed: 20000, currentSpeed: 12000, isHovered: false, offsetX: 0, offsetY: 0, targetOffsetX: 0, targetOffsetY: 0, rotation: 15, targetRotation: 15 },
     { ref: img2Ref, normalSpeed: 15000, slowSpeed: 25000, currentSpeed: 15000, isHovered: false, offsetX: 0, offsetY: 0, targetOffsetX: 0, targetOffsetY: 0, rotation: -20, targetRotation: -20 },
