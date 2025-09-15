@@ -19,7 +19,7 @@ export default function BubbleOverlay({
 }: BubbleOverlayProps) {
   return (
     <div className={`absolute ${position}`}>
-      <div className="bg-[#D799FE3D] backdrop-blur-sm rounded-full px-6 py-4 text-white text-base font-medium shadow-lg shadow-[#D799FE3D]">
+      <div className="bg-[#D799FE3D] backdrop-blur-sm rounded-full px-3 py-2 xs:px-4 xs:py-2.5 sm:px-8 sm:py-5 text-white text-xs xs:text-sm sm:text-base md:text-lg lg:text-xl font-medium shadow-lg shadow-[#D799FE3D] max-w-[80px] xs:max-w-[90px] sm:max-w-none">
         {text}
       </div>
       <Image
@@ -27,7 +27,7 @@ export default function BubbleOverlay({
         alt="Connection Line"
         width={lineWidth}
         height={lineHeight}
-        className={`absolute ${linePosition}`}
+        className={`absolute ${linePosition} hidden sm:block`}
       />
     </div>
   )

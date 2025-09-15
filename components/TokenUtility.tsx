@@ -6,17 +6,17 @@ export default function TokenUtility() {
       <div className="container-1400 relative z-10">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-[48px] lg:text-[64px] font-medium text-white mb-2">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-medium text-white mb-2">
             Token Utility
           </h2>
-          <p className="text-[40px] font-thin text-white max-w-7xl mx-auto mb-8">
+          <p className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-thin text-white max-w-7xl mx-auto mb-8">
             The EverXNode Token is the backbone of the ecosystem.
           </p>
         </div>
 
         {/* Utility includes section */}
         <div className="mb-12">
-          <h3 className="text-2xl font-medium text-white mb-4">
+          <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-medium text-white mb-4">
             Utility includes
           </h3>
           
@@ -27,10 +27,10 @@ export default function TokenUtility() {
               <div className="flex items-center space-x-6">
                 {/* Text Content - Left Side */}
                 <div className="flex-1">
-                  <h3 className="text-2xl font-regular text-white mb-4">
+                  <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-regular text-white mb-4">
                     Earn for Compute
                   </h3>
-                  <p className="text-white font-extralight leading-relaxed">
+                  <p className="text-white text-sm sm:text-base md:text-lg lg:text-xl font-extralight leading-relaxed">
                     Contribute your GPU/CPU power to process AI workloads, and earn EverXNode tokens in return.
                   </p>
                 </div>
@@ -55,10 +55,10 @@ export default function TokenUtility() {
               <div className="flex items-center space-x-6">
                 {/* Text Content - Left Side */}
                 <div className="flex-1">
-                  <h3 className="text-2xl font-regular text-white mb-4">
+                  <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-regular text-white mb-4">
                     Passive Income Potential
                   </h3>
-                  <p className="text-white font-extralight leading-relaxed">
+                  <p className="text-white text-sm sm:text-base md:text-lg lg:text-xl font-extralight leading-relaxed">
                     Once your node is active, you can enjoy continuous rewards as AI tasks are handled effortlessly in the background.
                   </p>
                 </div>
@@ -85,10 +85,10 @@ export default function TokenUtility() {
               <div className="flex items-center space-x-6">
                 {/* Text Content - Left Side */}
                 <div className="flex-1">
-                  <h3 className="text-2xl font-regular text-white mb-4">
+                  <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-regular text-white mb-4">
                     Staking Unlocks More
                   </h3>
-                  <p className="text-white font-extralight leading-relaxed">
+                  <p className="text-white text-sm sm:text-base md:text-lg lg:text-xl font-extralight leading-relaxed">
                     Premium and Enterprise licenses require staking EverXNode tokens and provide higher rewards.
                   </p>
                 </div>

@@ -129,11 +129,11 @@ export default function NFTLicensing() {
       <div className=" relative z-10">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-[48px] lg:text-[64px] font-medium text-white mb-2">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-medium text-white mb-2">
             What is EverXNode NFT <span className="text-[#D799FE]">Node</span> licensing<span className="text-[#D799FE]">?</span>
           </h2>
           <div className="text-center max-w-6xl mx-auto mb-8">
-            <p className="text-[24px] font-thin text-center  text-white">
+            <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-thin text-center text-white">
               <span className="text-[#D799FE]">EverXNode</span> NFT Node Licenses grant you the ability to operate AI compute nodes on
             
               our decentralized network. By securing an NFT license, you gain:
@@ -147,7 +147,7 @@ export default function NFTLicensing() {
           <div className="flex flex-col items-center text-center">
             {/* Header Card */}
             <div className="bg-[rgba(217,217,217,0.2)] rounded-full  py-2 w-full relative shadow-lg shadow-[#D799FE]/30 cursor-pointer" onClick={() => toggleCard(0)}>
-              <h3 className="text-[23px] font-extralight text-white">
+              <h3 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-extralight text-white">
                 Access to AI Compute Rewards
               </h3>
               {/* Triangular connector - hollow pointing down */}
@@ -158,7 +158,7 @@ export default function NFTLicensing() {
             
             {/* Description Card */}
             <div className={`bg-[rgba(217,217,217,0.2)] backdrop-blur-sm rounded-3xl p-8 py-12 w-full flex flex-col items-center mt-2 group transition-all duration-500 overflow-hidden ${openCards[0] ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0 p-0 py-0'}`}>
-              <p className="text-white font-extralight text-[20px] mb-8 leading-relaxed">
+              <p className="text-white font-extralight text-base sm:text-lg md:text-xl mb-8 leading-relaxed">
                 Earn EverXNode tokens by contributing your GPU/CPU power.
               </p>
               
@@ -183,7 +183,7 @@ export default function NFTLicensing() {
           <div className="flex flex-col items-center text-center">
             {/* Header Card */}
             <div className="bg-[rgba(217,217,217,0.2)] rounded-full  py-2 w-full relative shadow-lg shadow-[#D799FE]/30 cursor-pointer" onClick={() => toggleCard(1)}>
-              <h3 className="text-[23px] font-extralight text-white">
+              <h3 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-extralight text-white">
                 Exclusive Governance Rights
               </h3>
               {/* Triangular connector - hollow pointing down */}
@@ -194,7 +194,7 @@ export default function NFTLicensing() {
             
             {/* Description Card */}
             <div className={`bg-[rgba(217,217,217,0.2)] backdrop-blur-sm rounded-3xl p-8 py-12 w-full flex flex-col items-center mt-2 group transition-all duration-500 overflow-hidden ${openCards[1] ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0 p-0 py-0'}`}>
-              <p className="text-white font-extralight text-[20px] mb-8 leading-relaxed">
+              <p className="text-white font-extralight text-base sm:text-lg md:text-xl mb-8 leading-relaxed">
                 Vote on protocol updates and network decisions.
               </p>
               
@@ -219,7 +219,7 @@ export default function NFTLicensing() {
           <div className="flex flex-col items-center text-center">
                         {/* Header Card */}
             <div className="bg-[rgba(217,217,217,0.2)] rounded-full  py-2 w-full relative shadow-lg shadow-[#D799FE]/30 cursor-pointer" onClick={() => toggleCard(2)}>
-                 <h3 className="text-[23px] font-extralight text-white">
+                 <h3 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-extralight text-white">
                  Staking Boosts & Tiered Rewards
               </h3>
               {/* Triangular connector - hollow pointing down */}
@@ -230,7 +230,7 @@ export default function NFTLicensing() {
             
             {/* Description Card */}
             <div className={`bg-[rgba(217,217,217,0.2)] backdrop-blur-sm rounded-3xl p-8 py-12 w-full flex flex-col items-center mt-2 group transition-all duration-500 overflow-hidden ${openCards[2] ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0 p-0 py-0'}`}>
-                 <p className="text-white font-extralight text-[20px] mb-8 leading-relaxed">
+                 <p className="text-white font-extralight text-base sm:text-lg md:text-xl mb-8 leading-relaxed">
                  Unlock higher earnings and multipliers for NFT stakers.
               </p>
               

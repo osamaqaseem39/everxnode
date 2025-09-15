@@ -7,7 +7,7 @@ export default function LicensingTiers() {
       <div className="container-1400 relative z-10">
         {/* Section Header */}
         <div className="text-center mb-16">
-        <h2 className="text-[48px] lg:text-[64px] font-medium text-white mb-2">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-medium text-white mb-2">
         Key <span className="text-[#D799FE]">NFT Licensing Tiers</span>
           </h2>
         </div>

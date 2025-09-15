@@ -12,16 +12,16 @@ export default function Whitelisting() {
       <div className="container-1400 relative z-10">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-[48px] lg:text-[64px] font-medium text-white mb-2">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-medium text-white mb-2">
             Whitelisting
           </h2>
-          <p className="text-[40px] font-thin text-white max-w-7xl mx-auto mb-8">
+          <p className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-thin text-white max-w-7xl mx-auto mb-8">
             Whitelist access gives early adopters priority entry into EverXNode's compute economy.
           </p>
           
           {/* Benefits Label */}
           <div className="inline-block">
-            <span className="bg-white/[0.1] text-white px-6 py-2 rounded-full text-[20px] font-light">
+            <span className="bg-white/[0.1] text-white px-4 sm:px-6 py-2 rounded-full text-base sm:text-lg md:text-xl font-light">
               Benefits of Whitelisting
             </span>
           </div>
@@ -42,7 +42,7 @@ export default function Whitelisting() {
                 className=" mx-auto mb-12"
               />
             </div>
-            <h3 className="text-[24px] font-extralight text-white items-center text-center mb-6 leading-relaxed flex-grow">
+            <h3 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-extralight text-white items-center text-center mb-6 leading-relaxed flex-grow">
               Premium Reward Multipliers For Early Node Operators
             </h3>
            
@@ -59,7 +59,7 @@ export default function Whitelisting() {
                 className=" mx-auto mb-12"
               />
             </div>
-            <h3 className="text-[24px] font-extralight text-white items-center text-center mb-6 leading-relaxed flex-grow">
+            <h3 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-extralight text-white items-center text-center mb-6 leading-relaxed flex-grow">
               Guaranteed Allocation Before Public Sales
             </h3>
            
@@ -76,7 +76,7 @@ export default function Whitelisting() {
                 className="mx-auto mb-12"
               />
             </div>
-            <h3 className="text-[24px] font-extralight text-white items-center text-center mb-6 leading-relaxed flex-grow">
+            <h3 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-extralight text-white items-center text-center mb-6 leading-relaxed flex-grow">
               Access To Limited NFT Licenses (Scarcity = Value)
             </h3>
            
@@ -91,7 +91,7 @@ export default function Whitelisting() {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
               </svg>
             </button>
-            <span className="text-white font-medium">01/04</span>
+            <span className="text-white text-sm sm:text-base md:text-lg font-medium">01/04</span>
             <button className="w-10 h-10 bg-white rounded-full flex items-center justify-center text-black hover:bg-gray-200 transition-colors">
               <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
@@ -102,7 +102,7 @@ export default function Whitelisting() {
 
         {/* Main Call to Action */}
         <div className="text-center">
-          <button className="bg-gradient-to-r from-[#CA5DE5] to-[#5B5B5B] text-white px-8 py-4 rounded-full font-semibold hover:from-[#B54DD4] hover:to-[#4A4A4A] transition-all duration-300 transform hover:scale-105 shadow-[0_0_10px_#CA5DE5] hover:shadow-[0_0_20px_#CA5DE5]">
+          <button className="bg-gradient-to-r from-[#CA5DE5] to-[#5B5B5B] text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full text-sm sm:text-base md:text-lg font-semibold hover:from-[#B54DD4] hover:to-[#4A4A4A] transition-all duration-300 transform hover:scale-105 shadow-[0_0_10px_#CA5DE5] hover:shadow-[0_0_20px_#CA5DE5]">
             Join the Whitelist
           </button>
         </div>

@@ -19,10 +19,10 @@ export default function ContactHero() {
       <div className="container-1400 w-full relative z-10 py-20">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-[48px] lg:text-[64px] font-medium text-white mb-2">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-medium text-white mb-2">
             Contact Us
           </h2>
-          <p className="text-[40px] font-thin text-white max-w-7xl mx-auto mb-8">
+          <p className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-thin text-white max-w-7xl mx-auto mb-8">
             Get in touch with our team for any questions or inquiries.
           </p>
         </div>
@@ -34,7 +34,7 @@ export default function ContactHero() {
               href="https://discord.gg/vu5c3jn2" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="bg-white/[0.03] backdrop-blur-sm border border-white/10 rounded-full px-8 py-4 text-white text-lg font-medium shadow-lg shadow-[#D799FE3D] hover:bg-white/[0.05] hover:border-white/20 hover:shadow-xl hover:shadow-[#D799FE4D] transition-all duration-300 transform hover:scale-105"
+              className="bg-white/[0.03] backdrop-blur-sm border border-white/10 rounded-full px-6 sm:px-8 py-3 sm:py-4 text-white text-base sm:text-lg md:text-xl font-medium shadow-lg shadow-[#D799FE3D] hover:bg-white/[0.05] hover:border-white/20 hover:shadow-xl hover:shadow-[#D799FE4D] transition-all duration-300 transform hover:scale-105"
             >
               DISCORD
             </a>
@@ -42,7 +42,7 @@ export default function ContactHero() {
               href="https://x.com/EverXNode" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="bg-white/[0.03] backdrop-blur-sm border border-white/10 rounded-full px-8 py-4 text-white text-lg font-medium shadow-lg shadow-[#D799FE3D] hover:bg-white/[0.05] hover:border-white/20 hover:shadow-xl hover:shadow-[#D799FE4D] transition-all duration-300 transform hover:scale-105"
+              className="bg-white/[0.03] backdrop-blur-sm border border-white/10 rounded-full px-6 sm:px-8 py-3 sm:py-4 text-white text-base sm:text-lg md:text-xl font-medium shadow-lg shadow-[#D799FE3D] hover:bg-white/[0.05] hover:border-white/20 hover:shadow-xl hover:shadow-[#D799FE4D] transition-all duration-300 transform hover:scale-105"
             >
               TWITTER
             </a>
@@ -50,7 +50,7 @@ export default function ContactHero() {
               href="https://www.instagram.com/everxnode/" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="bg-white/[0.03] backdrop-blur-sm border border-white/10 rounded-full px-8 py-4 text-white text-lg font-medium shadow-lg shadow-[#D799FE3D] hover:bg-white/[0.05] hover:border-white/20 hover:shadow-xl hover:shadow-[#D799FE4D] transition-all duration-300 transform hover:scale-105"
+              className="bg-white/[0.03] backdrop-blur-sm border border-white/10 rounded-full px-6 sm:px-8 py-3 sm:py-4 text-white text-base sm:text-lg md:text-xl font-medium shadow-lg shadow-[#D799FE3D] hover:bg-white/[0.05] hover:border-white/20 hover:shadow-xl hover:shadow-[#D799FE4D] transition-all duration-300 transform hover:scale-105"
             >
               INSTAGRAM
             </a>
@@ -96,7 +96,7 @@ export default function ContactHero() {
             <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-cyan-400/20 rounded-full blur-2xl opacity-30"></div>
             <div className="absolute top-1/2 -right-8 w-16 h-16 bg-pink-400/15 rounded-full blur-xl opacity-25"></div>
             
-            <h3 className="text-2xl font-medium text-white mb-8 relative z-10">
+            <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-medium text-white mb-8 relative z-10">
               Your Detail
             </h3>
             
@@ -104,48 +104,48 @@ export default function ContactHero() {
               {/* Name and Email Row */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
-                  <label className="block text-white text-sm font-medium mb-2">
+                  <label className="block text-white text-sm sm:text-base md:text-lg font-medium mb-2">
                     Name
                   </label>
                   <input
                     type="text"
                     placeholder="Your Name"
-                    className="w-full bg-transparent border-b-2 border-[#D799FE] text-white placeholder-white/50 py-3 focus:outline-none focus:border-[#C088E8] transition-colors"
+                    className="w-full bg-transparent border-b-2 border-[#D799FE] text-white placeholder-white/50 py-3 focus:outline-none focus:border-[#C088E8] transition-colors text-sm sm:text-base md:text-lg"
                   />
                 </div>
                 <div>
-                  <label className="block text-white text-sm font-medium mb-2">
+                  <label className="block text-white text-sm sm:text-base md:text-lg font-medium mb-2">
                     Email Address
                   </label>
                   <input
                     type="email"
                     placeholder="Your Email"
-                    className="w-full bg-transparent border-b-2 border-[#D799FE] text-white placeholder-white/50 py-3 focus:outline-none focus:border-[#C088E8] transition-colors"
+                    className="w-full bg-transparent border-b-2 border-[#D799FE] text-white placeholder-white/50 py-3 focus:outline-none focus:border-[#C088E8] transition-colors text-sm sm:text-base md:text-lg"
                   />
                 </div>
               </div>
 
               {/* Subject */}
               <div>
-                <label className="block text-white text-sm font-medium mb-2">
+                <label className="block text-white text-sm sm:text-base md:text-lg font-medium mb-2">
                   Subject
                 </label>
                 <input
                   type="text"
                   placeholder="Message Subject"
-                  className="w-full bg-transparent border-b-2 border-[#D799FE] text-white placeholder-white/50 py-3 focus:outline-none focus:border-[#C088E8] transition-colors"
+                  className="w-full bg-transparent border-b-2 border-[#D799FE] text-white placeholder-white/50 py-3 focus:outline-none focus:border-[#C088E8] transition-colors text-sm sm:text-base md:text-lg"
                 />
               </div>
 
               {/* Comments/Questions */}
               <div>
-                <label className="block text-white text-sm font-medium mb-2">
+                <label className="block text-white text-sm sm:text-base md:text-lg font-medium mb-2">
                   Comments / Questions
                 </label>
                 <textarea
                   rows={4}
                   placeholder="Your Message"
-                  className="w-full bg-transparent border-b-2 border-[#D799FE] text-white placeholder-white/50 py-3 focus:outline-none focus:border-[#C088E8] transition-colors resize-none"
+                  className="w-full bg-transparent border-b-2 border-[#D799FE] text-white placeholder-white/50 py-3 focus:outline-none focus:border-[#C088E8] transition-colors resize-none text-sm sm:text-base md:text-lg"
                 ></textarea>
               </div>
 
@@ -153,7 +153,7 @@ export default function ContactHero() {
               <div className="text-center pt-6">
                 <button
                   type="submit"
-                  className="bg-gradient-to-r from-[#D799FE] to-pink-400 text-white px-12 py-4 rounded-full font-bold text-lg hover:from-[#C088E8] hover:to-pink-500 transition-all duration-300 transform hover:scale-105 shadow-2xl shadow-[#D799FE3D] hover:shadow-[#D799FE66]"
+                  className="bg-gradient-to-r from-[#D799FE] to-pink-400 text-white px-8 sm:px-12 py-3 sm:py-4 rounded-full font-bold text-base sm:text-lg md:text-xl hover:from-[#C088E8] hover:to-pink-500 transition-all duration-300 transform hover:scale-105 shadow-2xl shadow-[#D799FE3D] hover:shadow-[#D799FE66]"
                 >
                   SHARE
                 </button>

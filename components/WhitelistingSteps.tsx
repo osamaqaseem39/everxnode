@@ -10,10 +10,10 @@ export default function WhitelistingSteps() {
       <div className="container-1400 w-full relative z-10">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h1 className="text-5xl lg:text-6xl font-medium text-white mb-6">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-medium text-white mb-6">
             Whitelisting <span className="text-[#D799FE]">Step</span>
           </h1>
-          <p className="text-xl text-white/80 max-w-3xl mx-auto">
+          <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-white/80 max-w-3xl mx-auto">
             Follow these simple steps to join the EverXNode whitelist and secure your place in the future of AI compute.
           </p>
         </div>
@@ -42,13 +42,13 @@ export default function WhitelistingSteps() {
                 <div className="absolute top-9 right-3 w-1 h-1 bg-white rounded-full"></div>
               </div>
             </div>
-            <h3 className="text-2xl font-regular text-white mb-4">
+            <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-regular text-white mb-4">
               Sign up for whitelist registration
             </h3>
-            <p className="text-white font-extralight leading-relaxed mb-6">
+            <p className="text-white text-sm sm:text-base md:text-lg lg:text-xl font-extralight leading-relaxed mb-6">
               Join the exclusive whitelist to secure your early access to EverXNode's revolutionary AI compute platform.
             </p>
-            <button className="bg-[#D799FE] text-white px-8 py-3 rounded-full font-semibold hover:bg-[#C088E8] transition-all duration-300 transform hover:scale-105 shadow-lg shadow-[#D799FE3D]">
+            <button className="bg-[#D799FE] text-white px-6 sm:px-8 py-2 sm:py-3 rounded-full text-sm sm:text-base md:text-lg font-semibold hover:bg-[#C088E8] transition-all duration-300 transform hover:scale-105 shadow-lg shadow-[#D799FE3D]">
               Sign up
             </button>
           </div>
@@ -75,13 +75,13 @@ export default function WhitelistingSteps() {
                 </div>
               </div>
             </div>
-            <h3 className="text-2xl font-regular text-white mb-4">
+            <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-regular text-white mb-4">
               Secure your purchase allocation
             </h3>
-            <p className="text-white font-extralight leading-relaxed mb-6">
+            <p className="text-white text-sm sm:text-base md:text-lg lg:text-xl font-extralight leading-relaxed mb-6">
               Reserve your spot in the EverXNode ecosystem with guaranteed access to premium NFT Node Licenses.
             </p>
-            <button className="bg-[#D799FE] text-white px-8 py-3 rounded-full font-semibold hover:bg-[#C088E8] transition-all duration-300 transform hover:scale-105 shadow-lg shadow-[#D799FE3D]">
+            <button className="bg-[#D799FE] text-white px-6 sm:px-8 py-2 sm:py-3 rounded-full text-sm sm:text-base md:text-lg font-semibold hover:bg-[#C088E8] transition-all duration-300 transform hover:scale-105 shadow-lg shadow-[#D799FE3D]">
               Sign up
             </button>
           </div>
@@ -111,13 +111,13 @@ export default function WhitelistingSteps() {
                 </div>
               </div>
             </div>
-            <h3 className="text-2xl font-regular text-white mb-4">
+            <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-regular text-white mb-4">
               Claim your NFT Node License and earn
             </h3>
-            <p className="text-white font-extralight leading-relaxed mb-6">
+            <p className="text-white text-sm sm:text-base md:text-lg lg:text-xl font-extralight leading-relaxed mb-6">
               Activate your NFT Node License and start earning rewards by contributing to the AI compute network.
             </p>
-            <button className="bg-[#D799FE] text-white px-8 py-3 rounded-full font-semibold hover:bg-[#C088E8] transition-all duration-300 transform hover:scale-105 shadow-lg shadow-[#D799FE3D]">
+            <button className="bg-[#D799FE] text-white px-6 sm:px-8 py-2 sm:py-3 rounded-full text-sm sm:text-base md:text-lg font-semibold hover:bg-[#C088E8] transition-all duration-300 transform hover:scale-105 shadow-lg shadow-[#D799FE3D]">
               Sign up
             </button>
           </div>

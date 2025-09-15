@@ -26,7 +26,7 @@ export default function HowItWorks() {
           {/* Right Side - Process Steps */}
           <div className="space-y-8">
             {/* Section Title */}
-            <h2 className="text-5xl lg:text-6xl font-medium text-white mb-6 text-center">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-medium text-white mb-6 text-center">
               How It <span className="text-[#D799FE]">Works?</span>
             </h2>
 
@@ -44,10 +44,10 @@ export default function HowItWorks() {
                 
                 {/* Content */}
                 <div className="flex-1">
-                  <h3 className="text-lg font-bold text-white mb-2 uppercase tracking-wide">
+                  <h3 className="text-base sm:text-lg md:text-xl lg:text-2xl font-bold text-white mb-2 uppercase tracking-wide">
                     REGISTER FOR THE WHITELIST
                   </h3>
-                  <p className="text-white/70 text-sm leading-relaxed">
+                  <p className="text-white/70 text-sm sm:text-base md:text-lg leading-relaxed">
                     Sign up to secure priority access before the public mint goes live.
                   </p>
                 </div>
@@ -68,10 +68,10 @@ export default function HowItWorks() {
                 
                 {/* Content */}
                 <div className="flex-1">
-                  <h3 className="text-lg font-bold text-white mb-2 uppercase tracking-wide">
+                  <h3 className="text-base sm:text-lg md:text-xl lg:text-2xl font-bold text-white mb-2 uppercase tracking-wide">
                     RECEIVE YOUR ALLOCATION
                   </h3>
-                  <p className="text-white/70 text-sm leading-relaxed">
+                  <p className="text-white/70 text-sm sm:text-base md:text-lg leading-relaxed">
                     If selected, you'll be granted the opportunity to purchase an exclusive V-1 Node license.
                   </p>
                 </div>
@@ -92,10 +92,10 @@ export default function HowItWorks() {
                 
                 {/* Content */}
                 <div className="flex-1">
-                  <h3 className="text-lg font-bold text-white mb-2 uppercase tracking-wide">
+                  <h3 className="text-base sm:text-lg md:text-xl lg:text-2xl font-bold text-white mb-2 uppercase tracking-wide">
                     ACTIVATE YOUR NODE
                   </h3>
-                  <p className="text-white/70 text-sm leading-relaxed">
+                  <p className="text-white/70 text-sm sm:text-base md:text-lg leading-relaxed">
                     Deploy your node, connect your CPU/GPU resources and start earning rewards by powering AI compute tasks.
                   </p>
                 </div>

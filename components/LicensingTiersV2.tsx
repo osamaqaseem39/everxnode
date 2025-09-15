@@ -8,10 +8,10 @@ export default function LicensingTiersV2() {
       <div className="container-1400 relative z-10">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-5xl lg:text-6xl font-bold text-white mb-6">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-6">
             Key <span className="text-[#D799FE]">NFT Licensing Tiers</span>
           </h2>
-          <p className="text-xl text-white/80 max-w-3xl mx-auto">
+          <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-white/80 max-w-3xl mx-auto">
             EverXNode offers a tiered NFT Node Licensing structure, providing varying levels of rewards and benefits.
           </p>
         </div>
@@ -31,13 +31,13 @@ export default function LicensingTiersV2() {
                 <div className="absolute bottom-2 right-2 w-3 h-3 bg-blue-400 rounded-full opacity-60"></div>
               </div>
             </div>
-            <h3 className="text-2xl font-bold text-white mb-4">
+            <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-4">
               Bronze Tier
             </h3>
-            <p className="text-white/70 text-lg mb-8 leading-relaxed">
+            <p className="text-white/70 text-sm sm:text-base md:text-lg lg:text-xl mb-8 leading-relaxed">
               Entry-level access to the EverXNode compute economy, offering foundational rewards.
             </p>
-            <button className="bg-[#D799FE] text-white px-8 py-3 rounded-full font-semibold hover:bg-[#C088E8] transition-all duration-300 transform hover:scale-105 shadow-lg shadow-[#D799FE3D]">
+            <button className="bg-[#D799FE] text-white px-6 sm:px-8 py-2 sm:py-3 rounded-full text-sm sm:text-base md:text-lg font-semibold hover:bg-[#C088E8] transition-all duration-300 transform hover:scale-105 shadow-lg shadow-[#D799FE3D]">
               Learn More
             </button>
           </div>
@@ -55,13 +55,13 @@ export default function LicensingTiersV2() {
                 <div className="absolute bottom-2 right-2 w-3 h-3 bg-blue-400 rounded-full opacity-60"></div>
               </div>
             </div>
-            <h3 className="text-2xl font-bold text-white mb-4">
+            <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-4">
               Silver Tier
             </h3>
-            <p className="text-white/70 text-lg mb-8 leading-relaxed">
+            <p className="text-white/70 text-sm sm:text-base md:text-lg lg:text-xl mb-8 leading-relaxed">
               Enhanced rewards and benefits for dedicated node operators, with increased earning potential.
             </p>
-            <button className="bg-[#D799FE] text-white px-8 py-3 rounded-full font-semibold hover:bg-[#C088E8] transition-all duration-300 transform hover:scale-105 shadow-lg shadow-[#D799FE3D]">
+            <button className="bg-[#D799FE] text-white px-6 sm:px-8 py-2 sm:py-3 rounded-full text-sm sm:text-base md:text-lg font-semibold hover:bg-[#C088E8] transition-all duration-300 transform hover:scale-105 shadow-lg shadow-[#D799FE3D]">
               Learn More
             </button>
           </div>
@@ -79,13 +79,13 @@ export default function LicensingTiersV2() {
                 <div className="absolute bottom-2 right-2 w-3 h-3 bg-blue-400 rounded-full opacity-60"></div>
               </div>
             </div>
-            <h3 className="text-2xl font-bold text-white mb-4">
+            <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-4">
               Gold Tier
             </h3>
-            <p className="text-white/70 text-lg mb-8 leading-relaxed">
+            <p className="text-white/70 text-sm sm:text-base md:text-lg lg:text-xl mb-8 leading-relaxed">
               Premium access with maximum rewards, exclusive features, and top-tier governance participation.
             </p>
-            <button className="bg-[#D799FE] text-white px-8 py-3 rounded-full font-semibold hover:bg-[#C088E8] transition-all duration-300 transform hover:scale-105 shadow-lg shadow-[#D799FE3D]">
+            <button className="bg-[#D799FE] text-white px-6 sm:px-8 py-2 sm:py-3 rounded-full text-sm sm:text-base md:text-lg font-semibold hover:bg-[#C088E8] transition-all duration-300 transform hover:scale-105 shadow-lg shadow-[#D799FE3D]">
               Learn More
             </button>
           </div>

@@ -9,10 +9,10 @@ export default function AboutUs() {
       <div className="container-1400 relative z-10">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-5xl lg:text-6xl font-bold text-white mb-6">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-6">
             About <span className="text-[#D799FE]">EverXNode</span>
           </h2>
-          <p className="text-xl text-white/80 max-w-3xl mx-auto">
+          <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-white/80 max-w-3xl mx-auto">
             Pioneering the future of decentralized AI compute infrastructure
           </p>
         </div>
@@ -22,15 +22,15 @@ export default function AboutUs() {
           {/* Left Side - Mission Statement */}
           <div className="space-y-8">
             <div className="space-y-6">
-              <h3 className="text-3xl font-bold text-white">
+              <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white">
                 Our Mission
               </h3>
-              <p className="text-lg text-white/80 leading-relaxed">
+              <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-white/80 leading-relaxed">
                 EverXNode is revolutionizing the AI compute landscape by creating a decentralized network 
                 that democratizes access to high-performance computing resources. We're building the 
                 infrastructure that will power the next generation of AI applications.
               </p>
-              <p className="text-lg text-white/80 leading-relaxed">
+              <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-white/80 leading-relaxed">
                 By combining blockchain technology with AI compute capabilities, we're enabling 
                 individuals and organizations to participate in the AI revolution while earning 
                 rewards for their contributions.
@@ -40,11 +40,11 @@ export default function AboutUs() {
             {/* Key Stats */}
             <div className="grid grid-cols-2 gap-6 pt-8">
               <div className="text-center">
-                <div className="text-3xl font-bold text-[#D799FE] mb-2">100K+</div>
+                <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-[#D799FE] mb-2">100K+</div>
                 <div className="text-white/70">Active Nodes</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-[#D799FE] mb-2">$50M+</div>
+                <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-[#D799FE] mb-2">$50M+</div>
                 <div className="text-white/70">Total Rewards</div>
               </div>
             </div>
@@ -53,7 +53,7 @@ export default function AboutUs() {
           {/* Right Side - Vision & Values */}
           <div className="space-y-8">
             <div className="space-y-6">
-              <h3 className="text-3xl font-bold text-white">
+              <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white">
                 Vision & Values
               </h3>
               <div className="space-y-4">
@@ -62,8 +62,8 @@ export default function AboutUs() {
                     <div className="w-3 h-3 bg-[#D799FE] rounded-full"></div>
                   </div>
                   <div>
-                    <h4 className="text-lg font-semibold text-white mb-2">Decentralization</h4>
-                    <p className="text-white/70">Building a truly distributed network that empowers individuals worldwide</p>
+                    <h4 className="text-base sm:text-lg md:text-xl lg:text-2xl font-semibold text-white mb-2">Decentralization</h4>
+                    <p className="text-sm sm:text-base md:text-lg text-white/70">Building a truly distributed network that empowers individuals worldwide</p>
                   </div>
                 </div>
                 
@@ -72,8 +72,8 @@ export default function AboutUs() {
                     <div className="w-3 h-3 bg-[#D799FE] rounded-full"></div>
                   </div>
                   <div>
-                    <h4 className="text-lg font-semibold text-white mb-2">Innovation</h4>
-                    <p className="text-white/70">Pushing the boundaries of what's possible in AI and blockchain integration</p>
+                    <h4 className="text-base sm:text-lg md:text-xl lg:text-2xl font-semibold text-white mb-2">Innovation</h4>
+                    <p className="text-sm sm:text-base md:text-lg text-white/70">Pushing the boundaries of what's possible in AI and blockchain integration</p>
                   </div>
                 </div>
                 
@@ -82,8 +82,8 @@ export default function AboutUs() {
                     <div className="w-3 h-3 bg-[#D799FE] rounded-full"></div>
                   </div>
                   <div>
-                    <h4 className="text-lg font-semibold text-white mb-2">Community</h4>
-                    <p className="text-white/70">Fostering a collaborative ecosystem where everyone benefits from growth</p>
+                    <h4 className="text-base sm:text-lg md:text-xl lg:text-2xl font-semibold text-white mb-2">Community</h4>
+                    <p className="text-sm sm:text-base md:text-lg text-white/70">Fostering a collaborative ecosystem where everyone benefits from growth</p>
                   </div>
                 </div>
               </div>
@@ -93,18 +93,18 @@ export default function AboutUs() {
 
         {/* Bottom CTA Section */}
         <div className="text-center bg-gray-900/50 border border-[#D799FE3D] rounded-2xl p-12">
-          <h3 className="text-2xl font-bold text-white mb-4">
+          <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-4">
             Ready to Join the Revolution?
           </h3>
-          <p className="text-white/80 mb-8 max-w-2xl mx-auto">
+          <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-white/80 mb-8 max-w-2xl mx-auto">
             Be part of the future of decentralized AI compute. Join thousands of node operators 
             who are already earning rewards while powering the next generation of AI applications.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-[#D799FE] text-white px-8 py-4 rounded-lg font-semibold hover:bg-[#C088E8] transition-all duration-300 transform hover:scale-105 shadow-lg shadow-[#D799FE3D]">
+            <button className="bg-[#D799FE] text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg text-sm sm:text-base md:text-lg font-semibold hover:bg-[#C088E8] transition-all duration-300 transform hover:scale-105 shadow-lg shadow-[#D799FE3D]">
               Get Started Today
             </button>
-            <button className="border border-[#D799FE] text-white px-8 py-4 rounded-lg font-semibold hover:bg-[#D799FE] hover:text-black transition-all duration-300">
+            <button className="border border-[#D799FE] text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg text-sm sm:text-base md:text-lg font-semibold hover:bg-[#D799FE] hover:text-black transition-all duration-300">
               Learn More
             </button>
           </div>

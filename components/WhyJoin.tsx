@@ -43,7 +43,7 @@ export default function WhyJoin() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-5xl lg:text-6xl font-medium text-white mb-6">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-medium text-white mb-6">
             Why <span className="text-[#D799FE]">Join?</span>
           </h2>
         </div>
@@ -63,10 +63,10 @@ export default function WhyJoin() {
 
               {/* Content */}
               <div>
-                <h2 className="text-xl font-bold text-white mb-4 leading-tight">
+                <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-white mb-4 leading-tight">
                   EXCLUSIVE EARLY ADOPTER BENEFITS
                 </h2>
-                <p className="text-white/80 text-sm leading-relaxed">
+                <p className="text-white/80 text-sm sm:text-base md:text-lg leading-relaxed">
                   AS A WHITELIST MEMBER, YOU'LL UNLOCK PREMIUM REWARD MULTIPLIERS DESIGNED TO MAXIMIZE YOUR EARNINGS FROM THE VERY BEGINNING. EARLY ADOPTERS ENJOY PRIORITY ACCESS TO NETWORK BENEFITS.
                 </p>
               </div>
@@ -103,10 +103,10 @@ export default function WhyJoin() {
 
               {/* Content */}
               <div>
-                <h2 className="text-xl font-bold text-white mb-4 leading-tight">
+                <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-white mb-4 leading-tight">
                   PASSIVE INCOME POTENTIAL
                 </h2>
-                <p className="text-white/80 text-sm leading-relaxed">
+                <p className="text-white/80 text-sm sm:text-base md:text-lg leading-relaxed">
                   BY OPERATING AN EVERXNODE NFT-LICENSED NODE, YOU'LL CONTINUOUSLY EARN REWARDS FROM AI WORKLOADS RUNNING ON THE DECENTRALIZED NETWORK. THIS CREATES A SUSTAINABLE, HANDS-FREE INCOME STREAM POWERED BY REAL DEMAND FOR COMPUTE RESOURCES.
                 </p>
               </div>
@@ -139,10 +139,10 @@ export default function WhyJoin() {
 
               {/* Content */}
               <div>
-                <h2 className="text-xl font-bold text-white mb-4 leading-tight">
+                <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-white mb-4 leading-tight">
                   LIMITED SUPPLY HIGH DEMAND
                 </h2>
-                <p className="text-white/80 text-sm leading-relaxed">
+                <p className="text-white/80 text-sm sm:text-base md:text-lg leading-relaxed">
                   EVERXNODE NFT NODE LICENSES ARE SCARCE BY DESIGN, ONLY A FIXED NUMBER WILL EVER BE AVAILABLE. SECURING YOUR LICENSE EARLY ENSURES YOUR POSITION IN THE NETWORK BEFORE SUPPLY RUNS OUT AND SECONDARY MARKET DEMAND DRIVES UP VALUE.
                 </p>
               </div>
@@ -165,7 +165,7 @@ export default function WhyJoin() {
 
         {/* Call to Action */}
         <div className="text-center mt-16">
-          <Link href="/whitelisting" className="bg-gradient-to-r from-[#D799FE] to-pink-400 text-white px-12 py-4 rounded-full text-xl font-bold hover:from-[#C088E8] hover:to-pink-500 transition-all duration-300 transform hover:scale-105 shadow-2xl shadow-[#D799FE3D] hover:shadow-[#D799FE66] inline-block">
+          <Link href="/whitelisting" className="bg-gradient-to-r from-[#D799FE] to-pink-400 text-white px-8 sm:px-12 py-3 sm:py-4 rounded-full text-lg sm:text-xl md:text-2xl font-bold hover:from-[#C088E8] hover:to-pink-500 transition-all duration-300 transform hover:scale-105 shadow-2xl shadow-[#D799FE3D] hover:shadow-[#D799FE66] inline-block">
             Join the Whitelist Now
           </Link>
         </div>
