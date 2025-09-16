@@ -1,20 +1,11 @@
 export default function ContactHero() {
   return (
-    <section className="min-h-screen bg-gradient-to-bl from-cyan-900 via-black to-pink-900 relative overflow-hidden">
-      {/* Background Glows */}
+    <section className="py-24 relative overflow-hidden bg-transparent">
+      {/* Background Glows - Matching website style */}
       <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-[#D799FE3D] rounded-full blur-3xl opacity-20"></div>
       <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-[#D799FE3D] rounded-full blur-3xl opacity-20"></div>
-      <div className="absolute top-1/2 left-1/6 w-64 h-64 bg-cyan-400/20 rounded-full blur-3xl opacity-30"></div>
-      <div className="absolute bottom-1/3 right-1/6 w-80 h-80 bg-pink-400/15 rounded-full blur-3xl opacity-25"></div>
-      <div className="absolute top-1/6 right-1/3 w-72 h-72 bg-purple-400/20 rounded-full blur-3xl opacity-20"></div>
-      <div className="absolute bottom-1/6 left-1/3 w-56 h-56 bg-blue-400/15 rounded-full blur-3xl opacity-25"></div>
-      
-      {/* Top Right Glows */}
-      <div className="absolute top-0 right-0 w-96 h-96 bg-[#D799FE3D] rounded-full blur-3xl opacity-30"></div>
-      <div className="absolute top-8 right-8 w-32 h-32 bg-[#D799FE3D] rounded-full blur-2xl opacity-40"></div>
-      <div className="absolute top-16 right-24 w-20 h-20 bg-cyan-400/25 rounded-full blur-xl opacity-30"></div>
-      <div className="absolute top-24 right-12 w-16 h-16 bg-pink-400/20 rounded-full blur-lg opacity-25"></div>
-      <div className="absolute top-12 right-32 w-12 h-12 bg-purple-400/15 rounded-full blur-md opacity-20"></div>
+      <div className="absolute top-0 right-0 w-80 h-80 bg-[#D799FE2D] rounded-full blur-2xl opacity-15"></div>
+      <div className="absolute bottom-0 left-0 w-80 h-80 bg-[#D799FE2D] rounded-full blur-2xl opacity-15"></div>
       
       <div className="container-1400 w-full relative z-10 py-20">
         {/* Section Header */}
@@ -69,32 +60,17 @@ export default function ContactHero() {
                   className="w-full h-full object-contain relative z-10"
                 />
                 
-                {/* Purple Glow */}
+                {/* Main Glow Effect - Matching website style */}
                 <div className="absolute inset-0 w-full h-full bg-[#D799FE3D] rounded-full blur-3xl opacity-60"></div>
-                
-                {/* Teal Glow */}
-                <div className="absolute inset-0 w-full h-full bg-cyan-400/20 rounded-full blur-3xl opacity-40"></div>
-                
-                {/* Additional Glow Effects */}
-                <div className="absolute inset-0 w-full h-full bg-[#D799FE3D] rounded-full blur-3xl opacity-30 animate-pulse"></div>
-                <div className="absolute inset-0 w-full h-full bg-cyan-400/10 rounded-full blur-3xl opacity-20 animate-pulse"></div>
               </div>
-              
-              {/* Additional Glow Elements Around Spiral */}
-              <div className="absolute top-8 left-8 w-20 h-20 bg-pink-400/20 rounded-full blur-2xl opacity-30 animate-pulse"></div>
-              <div className="absolute bottom-12 right-12 w-16 h-16 bg-blue-400/15 rounded-full blur-xl opacity-25 animate-pulse"></div>
-              <div className="absolute top-1/2 -left-4 w-12 h-12 bg-purple-400/20 rounded-full blur-lg opacity-20 animate-pulse"></div>
-              <div className="absolute top-1/4 -right-6 w-14 h-14 bg-cyan-400/15 rounded-full blur-lg opacity-25 animate-pulse"></div>
             </div>
           </div>
 
           {/* Right Side - Contact Form */}
           <div className="bg-white/[0.03] border border-white/10 rounded-2xl p-8 backdrop-blur-sm relative">
-            {/* Form Glow Effects */}
-            <div className="absolute inset-0 bg-gradient-to-r from-[#D799FE3D]/10 via-transparent to-[#D799FE3D]/10 rounded-2xl"></div>
-            <div className="absolute -top-4 -left-4 w-32 h-32 bg-[#D799FE3D] rounded-full blur-2xl opacity-40"></div>
-            <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-cyan-400/20 rounded-full blur-2xl opacity-30"></div>
-            <div className="absolute top-1/2 -right-8 w-16 h-16 bg-pink-400/15 rounded-full blur-xl opacity-25"></div>
+            {/* Form Glow Effects - Matching website style */}
+            <div className="absolute -top-4 -left-4 w-32 h-32 bg-[#D799FE3D] rounded-full blur-2xl opacity-20"></div>
+            <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-[#D799FE3D] rounded-full blur-2xl opacity-15"></div>
             
             <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-medium text-white mb-8 relative z-10">
               Your Detail

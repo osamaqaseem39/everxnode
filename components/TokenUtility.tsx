@@ -2,7 +2,7 @@ import Image from 'next/image'
 
 export default function TokenUtility() {
   return (
-    <section className="-mt-32 lg:-mt-32 relative overflow-hidden bg-transparent">
+    <section id="token-utility" className="-mt-32 lg:-mt-32 relative overflow-hidden bg-transparent">
       <div className="container-1400 relative z-10">
         {/* Section Header */}
         <div className="text-center mb-16">

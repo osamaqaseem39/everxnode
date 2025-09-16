@@ -46,29 +46,25 @@ export default function Header() {
                 Home
               </Link>
               <span className="text-white text-sm sm:text-base md:text-lg font-extralight">{'>'}</span>
-              <Link href="/token-utility" className="text-white hover:text-gray-200 px-3 py-2 text-sm sm:text-base md:text-lg font-extralight transition-colors duration-200">
-                Token Utility
+              <Link href="/why-join" className="text-white hover:text-gray-200 px-3 py-2 text-sm sm:text-base md:text-lg font-extralight transition-colors duration-200">
+                Why Join
+              </Link>
+              <span className="text-white text-sm sm:text-base md:text-lg font-extralight">{'>'}</span>
+              <Link href="/how-it-works" className="text-white hover:text-gray-200 px-3 py-2 text-sm sm:text-base md:text-lg font-extralight transition-colors duration-200">
+                How It Works
               </Link>
               <span className="text-white text-sm sm:text-base md:text-lg font-extralight">{'>'}</span>
               <Link href="/whitelisting" className="text-white hover:text-gray-200 px-3 py-2 text-sm sm:text-base md:text-lg font-extralight transition-colors duration-200">
                 Whitelisting
-              </Link>
-              <span className="text-white text-sm sm:text-base md:text-lg font-extralight">{'>'}</span>
-              <Link href="/nft-licensing" className="text-white hover:text-gray-200 px-3 py-2 text-sm sm:text-base md:text-lg font-extralight transition-colors duration-200">
-                NFT Licensing
-              </Link>
-              <span className="text-white text-sm sm:text-base md:text-lg font-extralight">{'>'}</span>
-              <Link href="/about" className="text-white hover:text-gray-200 px-3 py-2 text-sm sm:text-base md:text-lg font-extralight transition-colors duration-200">
-                About us
               </Link>
             </div>
           </nav>
 
           {/* Desktop Contact Button */}
           <div className="hidden md:block">
-            <button className="bg-gradient-to-r from-[#CA5DE5] to-[#5B5B5B] text-white px-6 sm:px-8 py-2 sm:py-3 rounded-full text-sm sm:text-base md:text-lg font-semibold hover:from-[#B54DD4] hover:to-[#4A4A4A] transition-all duration-300 transform hover:scale-105 shadow-[0_0_30px_#CA5DE5] hover:shadow-[0_0_40px_#CA5DE5]">
+            <Link href="/contact" className="bg-gradient-to-r from-[#CA5DE5] to-[#5B5B5B] text-white px-6 sm:px-8 py-2 sm:py-3 rounded-full text-sm sm:text-base md:text-lg font-semibold hover:from-[#B54DD4] hover:to-[#4A4A4A] transition-all duration-300 transform hover:scale-105 shadow-[0_0_30px_#CA5DE5] hover:shadow-[0_0_40px_#CA5DE5]">
               Contact Us
-            </button>
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}
@@ -138,11 +134,18 @@ export default function Header() {
                     Home
                   </Link>
                   <Link 
-                    href="/token-utility" 
+                    href="/why-join" 
                     onClick={closeMobileMenu}
                     className="block text-white hover:text-[#D799FE] px-4 py-3 text-lg font-medium transition-colors duration-200 rounded-lg hover:bg-white/5"
                   >
-                    Token Utility
+                    Why Join
+                  </Link>
+                  <Link 
+                    href="/how-it-works" 
+                    onClick={closeMobileMenu}
+                    className="block text-white hover:text-[#D799FE] px-4 py-3 text-lg font-medium transition-colors duration-200 rounded-lg hover:bg-white/5"
+                  >
+                    How It Works
                   </Link>
                   <Link 
                     href="/whitelisting" 
@@ -150,20 +153,6 @@ export default function Header() {
                     className="block text-white hover:text-[#D799FE] px-4 py-3 text-lg font-medium transition-colors duration-200 rounded-lg hover:bg-white/5"
                   >
                     Whitelisting
-                  </Link>
-                  <Link 
-                    href="/nft-licensing" 
-                    onClick={closeMobileMenu}
-                    className="block text-white hover:text-[#D799FE] px-4 py-3 text-lg font-medium transition-colors duration-200 rounded-lg hover:bg-white/5"
-                  >
-                    NFT Licensing
-                  </Link>
-                  <Link 
-                    href="/about" 
-                    onClick={closeMobileMenu}
-                    className="block text-white hover:text-[#D799FE] px-4 py-3 text-lg font-medium transition-colors duration-200 rounded-lg hover:bg-white/5"
-                  >
-                    About us
                   </Link>
                 </div>
               </nav>

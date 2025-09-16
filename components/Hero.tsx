@@ -1,7 +1,29 @@
+"use client"
+
 import Image from 'next/image'
+import Link from 'next/link'
+import { useState, useRef, useEffect } from 'react'
 import BubbleOverlay from './BubbleOverlay'
 
 export default function Hero() {
+  const [isVideoCompleted, setIsVideoCompleted] = useState(false)
+  const videoRef = useRef<HTMLVideoElement>(null)
+
+  useEffect(() => {
+    // Hardcoded 9-second delay
+    const timer = setTimeout(() => {
+      setIsVideoCompleted(true)
+    }, 6000) // 9 seconds
+
+    return () => clearTimeout(timer)
+  }, [])
+
+  const handleVideoLoaded = () => {
+    // Auto-play the video when it's loaded
+    if (videoRef.current) {
+      videoRef.current.play()
+    }
+  }
   return (
     <section className="w-full relative bg-transparent py-8 sm:py-12 lg:py-16">
       {/* Ellipse 7 - Mobile optimized positioning */}
@@ -34,50 +56,36 @@ export default function Hero() {
             
             {/* Mobile: Centered buttons, Desktop: Positioned to the right */}
             <div className="flex flex-row gap-2 sm:gap-4 pt-6 sm:pt-8 lg:pt-8 pl-0 sm:pl-8 lg:pl-0 items-center lg:items-start justify-center lg:justify-start">
-              <button className="bg-gradient-to-r from-[#CA5DE5] to-[#5B5B5B] text-white px-4 xs:px-5 sm:px-6 md:px-8 py-2 xs:py-2.5 sm:py-3 rounded-full font-semibold hover:from-[#B54DD4] hover:to-[#4A4A4A] transition-all duration-300 transform hover:scale-105 shadow-[0_0_10px_#CA5DE5] hover:shadow-[0_0_20px_#CA5DE5] text-sm xs:text-base sm:text-lg md:text-xl w-auto">
+              <Link href="/whitelisting" className="bg-gradient-to-r from-[#CA5DE5] to-[#5B5B5B] text-white px-4 xs:px-5 sm:px-6 md:px-8 py-2 xs:py-2.5 sm:py-3 rounded-full font-semibold hover:from-[#B54DD4] hover:to-[#4A4A4A] transition-all duration-300 transform hover:scale-105 shadow-[0_0_10px_#CA5DE5] hover:shadow-[0_0_20px_#CA5DE5] text-sm xs:text-base sm:text-lg md:text-xl w-auto">
                 Join the Whitelist
-              </button>
-              <button className="bg-transparent border-2 border-[#CA5DE5] text-white px-4 xs:px-5 sm:px-6 md:px-8 py-2 xs:py-2.5 sm:py-3 rounded-full font-semibold hover:bg-[#CA5DE5] hover:text-black transition-all duration-300 transform hover:scale-105 shadow-[0_0_10px_#CA5DE5] hover:shadow-[0_0_20px_#CA5DE5] text-sm xs:text-base sm:text-lg md:text-xl w-auto">
+              </Link>
+              <Link href="/contact" className="bg-transparent border-2 border-[#CA5DE5] text-white px-4 xs:px-5 sm:px-6 md:px-8 py-2 xs:py-2.5 sm:py-3 rounded-full font-semibold hover:bg-[#CA5DE5] hover:text-black transition-all duration-300 transform hover:scale-105 shadow-[0_0_10px_#CA5DE5] hover:shadow-[0_0_20px_#CA5DE5] text-sm xs:text-base sm:text-lg md:text-xl w-auto">
                 Contact Us
-              </button>
+              </Link>
             </div>
             
             {/* Connection line to tree - Hidden on mobile, shown on lg+ */}
-            <div className="hidden lg:block absolute top-[600px] right-80 transform -translate-y-1/2 max-w-[600px] overflow-hidden">
-              <Image
-                src="/connect.png"
-                alt="Connection Line"
-                width={600}
-                height={40}
-                className="object-contain max-w-full h-auto"
-              />
-            </div>
+          
           </div>
 
           {/* Right Side - Tree Visualization */}
           <div className="relative w-full overflow-hidden order-2 lg:order-2">
             {/* Radial glow under the tree - Mobile optimized */}
-            <div className="absolute top-[200px] sm:top-[300px] lg:top-[400px] left-1/2 transform -translate-x-1/2 w-full max-w-[400px] sm:max-w-[600px] lg:max-w-[800px] h-[200px] sm:h-[300px] lg:h-[400px] opacity-60 pointer-events-none z-0 overflow-hidden">
+            <div className="absolute top-[200px] sm:top-[300px] lg:top-[400px] left-1/2 transform -translate-x-1/2 w-full max-w-[400px] sm:max-w-[600px] lg:max-w-[800px] h-[200px] sm:h-[300px] lg:h-[400px] opacity-60 pointer-events-none z-0">
               <div className="w-full h-full bg-radial-gradient from-[#D799FE3D] via-[#D799FE1A] to-transparent rounded-full blur-3xl"></div>
             </div>
             <div className="relative w-full min-h-[400px] sm:min-h-[500px] lg:min-h-[550px] flex items-center justify-center z-5 pt-4 sm:pt-8 lg:pt-16 pb-4 sm:pb-8 lg:pb-0">
               {/* Tree Image with Overlay Bubbles */}
               <div className="relative w-full h-full flex items-center justify-center">
-                {/* Mobile: Show image, Large+: Show video */}
-                <Image
-                  src="/tree.png"
-                  alt="Tree Visualization"
-                  width={800}
-                  height={600}
-                  className="w-full max-w-full h-auto object-contain lg:hidden min-h-[350px] sm:min-h-[450px]"
-                />
+                {/* Show image on all screen sizes */}
                 <video
+                  ref={videoRef}
                   src="/tree.mp4"
-                  autoPlay
-                  loop
                   muted
+                  autoPlay
                   playsInline
-                  className="w-full max-w-full h-auto object-contain hidden lg:block"
+                  onLoadedData={handleVideoLoaded}
+                  className="w-full max-w-full h-auto object-contain min-h-[350px] sm:min-h-[450px]"
                 />
                 
                 {/* Interactive Bubbles Overlay - Hidden on mobile, shown on sm+ */}
@@ -88,7 +96,8 @@ export default function Hero() {
                     lineImage="/linesmallinvertedflipped.png"
                     lineWidth={80}
                     lineHeight={30}
-                    linePosition="top-[15px] sm:top-[25px] lg:top-[25px] left-[100px] sm:left-[130px] lg:left-[180px]"
+                    linePosition="top-[15px] sm:top-[25px] lg:top-[35px] left-[100px] sm:left-[130px] lg:left-[240px]"
+                    isVisible={isVideoCompleted}
                   />
 
                   <BubbleOverlay
@@ -97,7 +106,8 @@ export default function Hero() {
                     lineImage="/linesmall.png"
                     lineWidth={80}
                     lineHeight={30}
-                    linePosition="top-[15px] sm:top-[25px] lg:top-[25px] right-[80px] sm:right-[110px] lg:right-[140px]"
+                    linePosition="top-[15px] sm:top-[25px] lg:top-[35px] right-[80px] sm:right-[110px] lg:right-[200px]"
+                    isVisible={isVideoCompleted}
                   />
 
                   <BubbleOverlay
@@ -106,7 +116,8 @@ export default function Hero() {
                     lineImage="/linesmallinverted.png"
                     lineWidth={80}
                     lineHeight={30}
-                    linePosition="top-[-5px] lg:top-[-5px] left-[110px] sm:left-[140px] lg:left-[185px]"
+                    linePosition="top-[-5px] lg:top-[15px] left-[110px] sm:left-[140px] lg:left-[235px]"
+                    isVisible={isVideoCompleted}
                   />
                 </div>
               </div>

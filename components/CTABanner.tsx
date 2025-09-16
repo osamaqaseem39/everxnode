@@ -27,14 +27,14 @@ export default function CTABanner() {
               </div>
               
               {/* Main Heading */}
-              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-medium text-white leading-tight">
+              <h2 className="text-2xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-medium text-white leading-tight">
                 Power the Future of AI with <span className="text-[#D799FE]">EverXNode's</span>
                 <br />
                 NFT <span className="text-[#D799FE]">Node</span> Licensing
               </h2>
               
               {/* Description */}
-              <p className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl font-thin text-white mb-2 sm:mb-4 leading-relaxed max-w-3xl">
+              <p className="text-sm sm:text-base md:text-md lg:text-lg xl:text-xl 2xl:text-2xl font-thin text-white mb-2 sm:mb-4 leading-relaxed max-w-3xl">
                 Step into the decentralized AI compute economy with exclusive NFT-licensed nodes. Each license unlocks access to premium rewards, governance participation, and priority earnings. Secure your whitelist spot today and be among the pioneers driving the future of AI infrastructure.
               </p>
               

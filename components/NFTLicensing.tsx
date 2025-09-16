@@ -120,13 +120,8 @@ export default function NFTLicensing() {
   };
 
   return (
-    <section className="py-12 container-1400 relative overflow-hidden w-full ">
-      {/* Subtle Background Glows */}
-      <div className="absolute top-1/4 left-0 w-72 h-72 bg-[#D799FE3D] rounded-full blur-3xl opacity-10"></div>
-      <div className="absolute bottom-1/4 right-0 w-72 h-72 bg-[#D799FE3D] rounded-full blur-3xl opacity-10"></div>
-      
-
-      <div className=" relative z-10">
+    <section id="nft-licensing" className="py-12 container-1400 relative overflow-hidden w-full bg-transparent">
+      <div className="relative z-10">
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-medium text-white mb-2">
@@ -147,7 +142,7 @@ export default function NFTLicensing() {
           <div className="flex flex-col items-center text-center">
             {/* Header Card */}
             <div className="bg-[rgba(217,217,217,0.2)] rounded-full  py-2 w-full relative shadow-lg shadow-[#D799FE]/30 cursor-pointer" onClick={() => toggleCard(0)}>
-              <h3 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-extralight text-white">
+              <h3 className="text-md sm:text-lg md:text-xl lg:text-2xl font-extralight text-white">
                 Access to AI Compute Rewards
               </h3>
               {/* Triangular connector - hollow pointing down */}
@@ -183,7 +178,7 @@ export default function NFTLicensing() {
           <div className="flex flex-col items-center text-center">
             {/* Header Card */}
             <div className="bg-[rgba(217,217,217,0.2)] rounded-full  py-2 w-full relative shadow-lg shadow-[#D799FE]/30 cursor-pointer" onClick={() => toggleCard(1)}>
-              <h3 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-extralight text-white">
+              <h3 className="text-md sm:text-lg md:text-xl lg:text-2xl font-extralight text-white">
                 Exclusive Governance Rights
               </h3>
               {/* Triangular connector - hollow pointing down */}
@@ -219,7 +214,7 @@ export default function NFTLicensing() {
           <div className="flex flex-col items-center text-center">
                         {/* Header Card */}
             <div className="bg-[rgba(217,217,217,0.2)] rounded-full  py-2 w-full relative shadow-lg shadow-[#D799FE]/30 cursor-pointer" onClick={() => toggleCard(2)}>
-                 <h3 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-extralight text-white">
+                 <h3 className="text-md sm:text-lg md:text-xl lg:text-2xl font-extralight text-white">
                  Staking Boosts & Tiered Rewards
               </h3>
               {/* Triangular connector - hollow pointing down */}

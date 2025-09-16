@@ -15,7 +15,7 @@ export default function HowItWorks() {
                 {/* Glow Effect */}
                 <div className="absolute inset-0 w-96 h-96 bg-gradient-to-br from-[#D799FE]/30 via-purple-500/20 to-teal-500/30 rounded-full blur-3xl opacity-60 animate-pulse"></div>
                 <img 
-                  src="/hiwelement.png" 
+                  src="/ring.gif" 
                   alt="How It Works Element" 
                   className="w-full h-full object-contain relative z-10"
                 />

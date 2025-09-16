@@ -27,10 +27,9 @@ export default function Footer() {
             <h4 className="text-sm sm:text-base md:text-lg font-semibold mb-4">Explore</h4>
             <ul className="flex flex-wrap justify-center gap-x-6 gap-y-2">
               <li><Link href="/" className="text-gray-400 hover:text-white text-sm sm:text-base">Home</Link></li>
-              <li><Link href="/token-utility" className="text-gray-400 hover:text-white text-sm sm:text-base">Token Utility</Link></li>
+              <li><Link href="/why-join" className="text-gray-400 hover:text-white text-sm sm:text-base">Why Join</Link></li>
+              <li><Link href="/how-it-works" className="text-gray-400 hover:text-white text-sm sm:text-base">How It Works</Link></li>
               <li><Link href="/whitelisting" className="text-gray-400 hover:text-white text-sm sm:text-base">Whitelisting</Link></li>
-              <li><Link href="/nft-licensing" className="text-gray-400 hover:text-white text-sm sm:text-base">NFT Licensing</Link></li>
-              <li><Link href="/about" className="text-gray-400 hover:text-white text-sm sm:text-base">About us</Link></li>
               <li><Link href="/contact" className="text-gray-400 hover:text-white text-sm sm:text-base">Contact</Link></li>
             </ul>
           </div>

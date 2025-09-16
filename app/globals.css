@@ -181,4 +181,49 @@ body {
 
 .animate-slide-in-bottom {
   animation: slideInBottom 1s ease-out 0.6s forwards;
+}
+
+/* Glow Pulse Animations */
+@keyframes pulseGlow {
+  0% {
+    opacity: 0.05;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.15;
+    transform: scale(1.1);
+  }
+  100% {
+    opacity: 0.05;
+    transform: scale(1);
+  }
+}
+
+@keyframes pulseGlowDelayed {
+  0% {
+    opacity: 0.05;
+    transform: scale(1);
+  }
+  25% {
+    opacity: 0.05;
+    transform: scale(1);
+  }
+  75% {
+    opacity: 0.15;
+    transform: scale(1.1);
+  }
+  100% {
+    opacity: 0.05;
+    transform: scale(1);
+  }
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 4s ease-in-out infinite;
+  animation-delay: 0s;
+}
+
+.animate-pulse-glow-delayed {
+  animation: pulseGlowDelayed 4s ease-in-out infinite;
+  animation-delay: 0s;
 } 

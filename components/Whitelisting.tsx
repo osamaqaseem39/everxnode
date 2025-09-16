@@ -3,12 +3,6 @@ import Image from 'next/image'
 export default function Whitelisting() {
   return (
     <section className="py-12 relative bg-transparent overflow-x-hidden">
-      {/* Subtle Background Gradient */}
-      <div className="absolute inset-0 bg-gradient-to-r from-[#D799FE3D]/5 via-transparent to-[#D799FE3D]/5"></div>
-      
-      {/* Purple Strip Behind Cards - Full Width */}
-      <div className="absolute left-0 right-0 w-full h-[100px] bg-[#D799FE] z-10" style={{top: '600px'}}></div>
-      
       <div className="container-1400 relative z-10">
         {/* Section Header */}
         <div className="text-center mb-16">
