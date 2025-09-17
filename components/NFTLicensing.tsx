@@ -7,42 +7,20 @@ export default function NFTLicensing() {
   const img2Ref = useRef<HTMLImageElement>(null);
   const img3Ref = useRef<HTMLImageElement>(null);
   const [openCards, setOpenCards] = useState<boolean[]>([true, true, true]);
-  const speedsRef = useRef([
-    { ref: img1Ref, normalSpeed: 12000, slowSpeed: 20000, currentSpeed: 12000, isHovered: false, offsetX: 0, offsetY: 0, targetOffsetX: 0, targetOffsetY: 0, rotation: 15, targetRotation: 15 },
-    { ref: img2Ref, normalSpeed: 15000, slowSpeed: 25000, currentSpeed: 15000, isHovered: false, offsetX: 0, offsetY: 0, targetOffsetX: 0, targetOffsetY: 0, rotation: -20, targetRotation: -20 },
-    { ref: img3Ref, normalSpeed: 18000, slowSpeed: 30000, currentSpeed: 18000, isHovered: false, offsetX: 0, offsetY: 0, targetOffsetX: 0, targetOffsetY: 0, rotation: 10, targetRotation: 10 }
-  ]);
 
   useEffect(() => {
     let animationId: number;
     let startTime = Date.now();
-    const speeds = speedsRef.current;
 
     const animate = () => {
       const currentTime = Date.now();
       const elapsed = currentTime - startTime;
       
-      speeds.forEach((speed, index) => {
-        if (speed.ref.current) {
-          // Smoothly transition speed
-          const targetSpeed = speed.isHovered ? speed.slowSpeed : speed.normalSpeed;
-          speed.currentSpeed += (targetSpeed - speed.currentSpeed) * 0.02;
-          
-          // Smooth repulsion effect
-          speed.offsetX += (speed.targetOffsetX - speed.offsetX) * 0.15;
-          speed.offsetY += (speed.targetOffsetY - speed.offsetY) * 0.15;
-          
-          // Continuous spin animation (2000ms per rotation)
+      const refs = [img1Ref, img2Ref, img3Ref];
+      refs.forEach((ref) => {
+        if (ref.current) {
           const spinRotation = (elapsed / 2000) * 360;
-          
-          // Smooth rotation effect for hover interactions
-          speed.rotation += (speed.targetRotation - speed.rotation) * 0.1;
-          
-          // Combine spin rotation with hover rotation
-          const totalRotation = spinRotation + speed.rotation;
-          
-          // Apply transform with repulsion and rotation
-          speed.ref.current.style.transform = `translate(${speed.offsetX}px, ${speed.offsetY}px) rotate(${totalRotation}deg)`;
+          ref.current.style.transform = `rotate(${spinRotation}deg)`;
         }
       });
       
@@ -55,61 +33,6 @@ export default function NFTLicensing() {
       cancelAnimationFrame(animationId);
     };
   }, []);
-
-  const handleMouseEnter = (index: number) => (e: React.MouseEvent<HTMLImageElement>) => {
-    const speed = speedsRef.current[index];
-    speed.isHovered = true;
-    
-    // Create repulsion effect - push away from cursor
-    const rect = e.currentTarget.getBoundingClientRect();
-    const centerX = rect.left + rect.width / 2;
-    const centerY = rect.top + rect.height / 2;
-    const deltaX = centerX - e.clientX;
-    const deltaY = centerY - e.clientY;
-    const distance = Math.sqrt(deltaX * deltaX + deltaY * deltaY);
-    const repulsionStrength = 30;
-    
-    if (distance > 0) {
-      speed.targetOffsetX = (deltaX / distance) * repulsionStrength;
-      speed.targetOffsetY = (deltaY / distance) * repulsionStrength;
-      
-      // Add rotation based on cursor position relative to image center
-      const angle = Math.atan2(deltaY, deltaX) * (180 / Math.PI);
-      speed.targetRotation = angle * 0.3; // Subtle rotation based on cursor direction
-    }
-  };
-
-  const handleMouseMove = (index: number) => (e: React.MouseEvent<HTMLImageElement>) => {
-    const speed = speedsRef.current[index];
-    if (!speed.isHovered) return;
-    
-    // Update repulsion effect based on current cursor position
-    const rect = e.currentTarget.getBoundingClientRect();
-    const centerX = rect.left + rect.width / 2;
-    const centerY = rect.top + rect.height / 2;
-    const deltaX = centerX - e.clientX;
-    const deltaY = centerY - e.clientY;
-    const distance = Math.sqrt(deltaX * deltaX + deltaY * deltaY);
-    const repulsionStrength = Math.max(10, 50 - distance * 0.2); // Dynamic strength based on distance
-    
-    if (distance > 0) {
-      speed.targetOffsetX = (deltaX / distance) * repulsionStrength;
-      speed.targetOffsetY = (deltaY / distance) * repulsionStrength;
-      
-      // Dynamic rotation based on cursor position and distance
-      const angle = Math.atan2(deltaY, deltaX) * (180 / Math.PI);
-      const rotationIntensity = Math.min(1, distance / 100); // More rotation when cursor is further
-      speed.targetRotation = angle * 0.2 * rotationIntensity;
-    }
-  };
-
-  const handleMouseLeave = (index: number) => () => {
-    const speed = speedsRef.current[index];
-    speed.isHovered = false;
-    speed.targetOffsetX = 0;
-    speed.targetOffsetY = 0;
-    speed.targetRotation = 0; // Return to original rotation
-  };
 
   const toggleCard = (index: number) => {
     setOpenCards(prev => {
@@ -165,10 +88,7 @@ export default function NFTLicensing() {
                   alt="AI Compute Rewards" 
                   width={200}
                   height={200}
-                  className="object-contain transition-all duration-500 group-hover:scale-110"
-                  onMouseEnter={handleMouseEnter(0)}
-                  onMouseMove={handleMouseMove(0)}
-                  onMouseLeave={handleMouseLeave(0)}
+                  className="object-contain"
                 />
               </div>
             </div>
@@ -201,10 +121,7 @@ export default function NFTLicensing() {
                   alt="Governance Rights" 
                   width={200}
                   height={200}
-                  className="object-contain transition-all duration-500 group-hover:scale-110"
-                  onMouseEnter={handleMouseEnter(1)}
-                  onMouseMove={handleMouseMove(1)}
-                  onMouseLeave={handleMouseLeave(1)}
+                  className="object-contain"
                 />
               </div>
             </div>
@@ -237,10 +154,7 @@ export default function NFTLicensing() {
                   alt="Staking Rewards" 
                   width={200}
                   height={200}
-                  className="object-contain transition-all duration-500 group-hover:scale-110"
-                  onMouseEnter={handleMouseEnter(2)}
-                  onMouseMove={handleMouseMove(2)}
-                  onMouseLeave={handleMouseLeave(2)}
+                  className="object-contain"
                 />
               </div>
             </div>

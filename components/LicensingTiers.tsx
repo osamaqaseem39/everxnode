@@ -14,9 +14,18 @@ export default function LicensingTiers() {
 
         {/* Licensing Tiers Cards */}
         <div className="grid lg:grid-cols-3 gap-8">
-          <img src="/card2.png" alt="Basic Tier Card" className="w-full rounded-2xl" />
-          <img src="/card1.png" alt="Premium Tier Card" className="w-full rounded-2xl" />
-          <img src="/card3.png" alt="Enterprise Tier Card" className="w-full rounded-2xl" />
+          <div className="text-center">
+            <img src="/basic.png" alt="Basic Tier" className="mx-auto mb-4" />
+            <img src="/basiccard.png" alt="Basic Tier Card" className="w-full rounded-2xl" />
+          </div>
+          <div className="text-center">
+            <img src="/premium.png" alt="Premium Tier" className="mx-auto mb-4" />
+            <img src="/premiumcard.png" alt="Premium Tier Card" className="w-full rounded-2xl" />
+          </div>
+          <div className="text-center">
+            <img src="/enterprice.png" alt="Enterprise Tier" className="mx-auto mb-4" />
+            <img src="/enterprisecard.png" alt="Enterprise Tier Card" className="w-full rounded-2xl" />
+          </div>
         </div>
       </div>
     </section>

@@ -1,11 +1,37 @@
+'use client'
+
+import { useEffect, useState } from 'react'
+
 export default function WhitelistingSteps() {
+  const [cardStates, setCardStates] = useState<number[]>([0, 0, 0]); // 0: hidden, 1: scaled up in center, 2: scaled down in center, 3: final position
+
+  useEffect(() => {
+    // Card 1
+    const timer1a = setTimeout(() => setCardStates([1, 0, 0]), 200);
+    const timer1b = setTimeout(() => setCardStates([2, 0, 0]), 600);
+    const timer1c = setTimeout(() => setCardStates([3, 0, 0]), 1000);
+    
+    // Card 2
+    const timer2a = setTimeout(() => setCardStates([3, 1, 0]), 1200);
+    const timer2b = setTimeout(() => setCardStates([3, 2, 0]), 1600);
+    const timer2c = setTimeout(() => setCardStates([3, 3, 0]), 2000);
+    
+    // Card 3
+    const timer3a = setTimeout(() => setCardStates([3, 3, 1]), 2200);
+    const timer3b = setTimeout(() => setCardStates([3, 3, 2]), 2600);
+    const timer3c = setTimeout(() => setCardStates([3, 3, 3]), 3000);
+
+    return () => {
+      clearTimeout(timer1a); clearTimeout(timer1b); clearTimeout(timer1c);
+      clearTimeout(timer2a); clearTimeout(timer2b); clearTimeout(timer2c);
+      clearTimeout(timer3a); clearTimeout(timer3b); clearTimeout(timer3c);
+    };
+  }, []);
+
   return (
-    <section className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-black relative overflow-hidden flex items-center">
-      {/* Background Glows */}
-      <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-[#D799FE3D] rounded-full blur-3xl opacity-20"></div>
-      <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-[#D799FE3D] rounded-full blur-3xl opacity-20"></div>
-      <div className="absolute top-0 right-0 w-80 h-80 bg-[#D799FE2D] rounded-full blur-2xl opacity-15"></div>
-      <div className="absolute bottom-0 left-0 w-80 h-80 bg-[#D799FE2D] rounded-full blur-2xl opacity-15"></div>
+    <section className="py-24 relative overflow-hidden bg-transparent">
+      {/* Subtle Background Gradient */}
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#D799FE3D]/5 to-transparent"></div>
       
       <div className="container-1400 w-full relative z-10">
         {/* Section Header */}
@@ -21,31 +47,19 @@ export default function WhitelistingSteps() {
         {/* Whitelisting Steps Cards */}
         <div className="grid md:grid-cols-3 gap-8">
           {/* Step 1: Sign up for whitelist registration */}
-          <div className="bg-gray-900/80 border border-gray-800 rounded-2xl p-8 text-center hover:border-[#D799FE3D] transition-all duration-300 group">
+          <div className={`bg-gray-900/80 border border-gray-800 rounded-2xl p-8 text-center hover:border-[#D799FE3D] transition-all duration-300 group transform transition-all duration-400 ease-out ${
+            cardStates[0] === 0 ? 'opacity-0 scale-150 translate-x-0 translate-y-0' :
+            cardStates[0] === 1 ? 'opacity-100 scale-150 translate-x-0 translate-y-0' :
+            cardStates[0] === 2 ? 'opacity-100 scale-100 translate-x-0 translate-y-0' :
+            'opacity-100 scale-100 translate-x-0 translate-y-0'
+          }`}>
             <div className="mb-8">
-              {/* Brain with Interconnected Lines Icon */}
-              <div className="w-24 h-24 mx-auto relative">
-                <div className="absolute inset-0 w-20 h-20 bg-gradient-to-br from-[#D799FE] via-[#C088E8] to-[#9B59B6] rounded-full transform rotate-45 shadow-lg opacity-90"></div>
-                <div className="absolute inset-0 w-16 h-16 bg-gradient-to-br from-[#C088E8] to-[#9B59B6] rounded-full transform -rotate-12 opacity-80"></div>
-                <div className="absolute inset-0 w-12 h-12 bg-gradient-to-br from-[#9B59B6] to-[#8E44AD] rounded-full transform rotate-24 opacity-70"></div>
-                {/* Interconnected lines pattern */}
-                <div className="absolute top-3 left-3 w-8 h-1 bg-white rounded-full transform rotate-45 opacity-80"></div>
-                <div className="absolute top-6 left-2 w-6 h-1 bg-white rounded-full transform -rotate-30 opacity-80"></div>
-                <div className="absolute top-8 left-4 w-4 h-1 bg-white rounded-full transform rotate-60 opacity-80"></div>
-                <div className="absolute top-5 right-3 w-5 h-1 bg-white rounded-full transform -rotate-45 opacity-80"></div>
-                <div className="absolute top-8 right-2 w-3 h-1 bg-white rounded-full transform rotate-30 opacity-80"></div>
-                {/* Connection dots */}
-                <div className="absolute top-4 left-4 w-1 h-1 bg-white rounded-full"></div>
-                <div className="absolute top-6 left-6 w-1 h-1 bg-white rounded-full"></div>
-                <div className="absolute top-8 left-3 w-1 h-1 bg-white rounded-full"></div>
-                <div className="absolute top-7 right-4 w-1 h-1 bg-white rounded-full"></div>
-                <div className="absolute top-9 right-3 w-1 h-1 bg-white rounded-full"></div>
-              </div>
+              <img src="/wjcard1.png" alt="Whitelist Step 1" className="w-24 h-24 mx-auto" />
             </div>
-            <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-regular text-white mb-4">
+            <h3 className="text-xl sm:text-2xl md:text-2xl lg:text-3xl font-regular text-white mb-4">
               Sign up for whitelist registration
             </h3>
-            <p className="text-white text-sm sm:text-base md:text-lg lg:text-xl font-extralight leading-relaxed mb-6">
+              <p className="text-white text-sm sm:text-sm md:text-md lg:text-lg font-extralight leading-relaxed mb-6">
               Join the exclusive whitelist to secure your early access to EverXNode's revolutionary AI compute platform.
             </p>
             <button className="bg-[#D799FE] text-white px-6 sm:px-8 py-2 sm:py-3 rounded-full text-sm sm:text-base md:text-lg font-semibold hover:bg-[#C088E8] transition-all duration-300 transform hover:scale-105 shadow-lg shadow-[#D799FE3D]">
@@ -54,31 +68,19 @@ export default function WhitelistingSteps() {
           </div>
 
           {/* Step 2: Secure your purchase allocation */}
-          <div className="bg-gray-900/80 border border-gray-800 rounded-2xl p-8 text-center hover:border-[#D799FE3D] transition-all duration-300 group">
+          <div className={`bg-gray-900/80 border border-gray-800 rounded-2xl p-8 text-center hover:border-[#D799FE3D] transition-all duration-300 group transform transition-all duration-400 ease-out ${
+            cardStates[1] === 0 ? 'opacity-0 scale-150 translate-x-0 translate-y-0' :
+            cardStates[1] === 1 ? 'opacity-100 scale-150 translate-x-0 translate-y-0' :
+            cardStates[1] === 2 ? 'opacity-100 scale-100 translate-x-0 translate-y-0' :
+            'opacity-100 scale-100 translate-x-0 translate-y-0'
+          }`}>
             <div className="mb-8">
-              {/* Credit Card Icon */}
-              <div className="w-24 h-24 mx-auto relative">
-                <div className="absolute inset-0 w-20 h-20 bg-gradient-to-br from-[#D799FE] via-[#C088E8] to-[#9B59B6] rounded-full transform rotate-45 shadow-lg opacity-90"></div>
-                <div className="absolute inset-0 w-16 h-16 bg-gradient-to-br from-[#C088E8] to-[#9B59B6] rounded-full transform -rotate-12 opacity-80"></div>
-                <div className="absolute inset-0 w-12 h-12 bg-gradient-to-br from-[#9B59B6] to-[#8E44AD] rounded-full transform rotate-24 opacity-70"></div>
-                {/* Credit Card */}
-                <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-10 h-6 bg-white rounded-sm relative">
-                  {/* Card stripes */}
-                  <div className="absolute top-1 left-1 w-6 h-0.5 bg-[#D799FE] rounded-sm"></div>
-                  <div className="absolute bottom-1 left-1 w-4 h-0.5 bg-[#D799FE] rounded-sm"></div>
-                  <div className="absolute top-1/2 right-1 transform -translate-y-1/2 w-0.5 h-3 bg-[#D799FE] rounded-sm"></div>
-                  {/* Card number lines */}
-                  <div className="absolute top-3 left-1 w-1 h-0.5 bg-[#D799FE] rounded-sm"></div>
-                  <div className="absolute top-3 left-2 w-1 h-0.5 bg-[#D799FE] rounded-sm"></div>
-                  <div className="absolute top-3 left-3 w-1 h-0.5 bg-[#D799FE] rounded-sm"></div>
-                  <div className="absolute top-3 left-4 w-1 h-0.5 bg-[#D799FE] rounded-sm"></div>
-                </div>
-              </div>
+              <img src="/wjcard2.png" alt="Whitelist Step 2" className="w-24 h-24 mx-auto" />
             </div>
-            <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-regular text-white mb-4">
+            <h3 className="text-xl sm:text-2xl md:text-2xl lg:text-3xl font-regular text-white mb-4">
               Secure your purchase allocation
             </h3>
-            <p className="text-white text-sm sm:text-base md:text-lg lg:text-xl font-extralight leading-relaxed mb-6">
+            <p className="text-white text-sm sm:text-sm md:text-md lg:text-lg font-extralight leading-relaxed mb-6">
               Reserve your spot in the EverXNode ecosystem with guaranteed access to premium NFT Node Licenses.
             </p>
             <button className="bg-[#D799FE] text-white px-6 sm:px-8 py-2 sm:py-3 rounded-full text-sm sm:text-base md:text-lg font-semibold hover:bg-[#C088E8] transition-all duration-300 transform hover:scale-105 shadow-lg shadow-[#D799FE3D]">
@@ -87,34 +89,19 @@ export default function WhitelistingSteps() {
           </div>
 
           {/* Step 3: Claim your NFT Node License and earn */}
-          <div className="bg-gray-900/80 border border-gray-800 rounded-2xl p-8 text-center hover:border-[#D799FE3D] transition-all duration-300 group">
+          <div className={`bg-gray-900/80 border border-gray-800 rounded-2xl p-8 text-center hover:border-[#D799FE3D] transition-all duration-300 group transform transition-all duration-400 ease-out ${
+            cardStates[2] === 0 ? 'opacity-0 scale-150 translate-x-0 translate-y-0' :
+            cardStates[2] === 1 ? 'opacity-100 scale-150 translate-x-0 translate-y-0' :
+            cardStates[2] === 2 ? 'opacity-100 scale-100 translate-x-0 translate-y-0' :
+            'opacity-100 scale-100 translate-x-0 translate-y-0'
+          }`}>
             <div className="mb-8">
-              {/* NFT Cards Icon */}
-              <div className="w-24 h-24 mx-auto relative">
-                <div className="absolute inset-0 w-20 h-20 bg-gradient-to-br from-[#D799FE] via-[#C088E8] to-[#9B59B6] rounded-full transform rotate-45 shadow-lg opacity-90"></div>
-                <div className="absolute inset-0 w-16 h-16 bg-gradient-to-br from-[#C088E8] to-[#9B59B6] rounded-full transform -rotate-12 opacity-80"></div>
-                <div className="absolute inset-0 w-12 h-12 bg-gradient-to-br from-[#9B59B6] to-[#8E44AD] rounded-full transform rotate-24 opacity-70"></div>
-                {/* Overlapping NFT Cards */}
-                <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-                  {/* Back card */}
-                  <div className="w-8 h-10 bg-white rounded-lg transform rotate-6 relative">
-                    <div className="absolute inset-1 bg-[#D799FE] rounded-sm flex items-center justify-center">
-                      <span className="text-white text-xs font-bold">NFT</span>
-                    </div>
-                  </div>
-                  {/* Front card */}
-                  <div className="absolute top-0 left-0 w-8 h-10 bg-white rounded-lg transform -rotate-3 relative">
-                    <div className="absolute inset-1 bg-[#D799FE] rounded-sm flex items-center justify-center">
-                      <span className="text-white text-xs font-bold">NFT</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              <img src="/wjcard3.png" alt="Whitelist Step 3" className="w-24 h-24 mx-auto" />
             </div>
-            <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-regular text-white mb-4">
+            <h3 className="text-xl sm:text-2xl md:text-2xl lg:text-3xl font-regular text-white mb-4">
               Claim your NFT Node License and earn
             </h3>
-            <p className="text-white text-sm sm:text-base md:text-lg lg:text-xl font-extralight leading-relaxed mb-6">
+            <p className="text-white text-sm sm:text-sm md:text-md lg:text-lg font-extralight leading-relaxed mb-6">
               Activate your NFT Node License and start earning rewards by contributing to the AI compute network.
             </p>
             <button className="bg-[#D799FE] text-white px-6 sm:px-8 py-2 sm:py-3 rounded-full text-sm sm:text-base md:text-lg font-semibold hover:bg-[#C088E8] transition-all duration-300 transform hover:scale-105 shadow-lg shadow-[#D799FE3D]">
