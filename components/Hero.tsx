@@ -7,7 +7,9 @@ import BubbleOverlay from './BubbleOverlay'
 
 export default function Hero() {
   const [isVideoCompleted, setIsVideoCompleted] = useState(false)
+  const [isPlayingLoop, setIsPlayingLoop] = useState(false)
   const videoRef = useRef<HTMLVideoElement>(null)
+  const loopVideoRef = useRef<HTMLVideoElement>(null)
 
   useEffect(() => {
     // Hardcoded 9-second delay
@@ -18,10 +20,54 @@ export default function Hero() {
     return () => clearTimeout(timer)
   }, [])
 
+  useEffect(() => {
+    // When isPlayingLoop becomes true, ensure the loop video plays
+    if (isPlayingLoop && loopVideoRef.current) {
+      console.log('isPlayingLoop changed to true, starting loop video')
+      loopVideoRef.current.play()
+    }
+  }, [isPlayingLoop])
+
   const handleVideoLoaded = () => {
     // Auto-play the video when it's loaded
     if (videoRef.current) {
       videoRef.current.play()
+      
+      // Set up timer to start loop video 1 second before the first video ends
+      const video = videoRef.current
+      const checkTime = () => {
+        if (video.duration && video.currentTime >= video.duration - 1) {
+          // Start the loop video 1 second before the first video ends
+          console.log('Starting loop video transition')
+          setIsPlayingLoop(true)
+          if (loopVideoRef.current) {
+            console.log('Playing loop video')
+            loopVideoRef.current.play()
+          }
+          // Remove the event listener to prevent multiple triggers
+          video.removeEventListener('timeupdate', checkTime)
+        } else {
+          // Continue checking
+          requestAnimationFrame(checkTime)
+        }
+      }
+      
+      // Start checking when video starts playing
+      video.addEventListener('timeupdate', checkTime)
+    }
+  }
+
+  const handleVideoEnded = () => {
+    // When the first video ends, ensure loop is playing
+    if (loopVideoRef.current) {
+      loopVideoRef.current.play()
+    }
+  }
+
+  const handleLoopVideoLoaded = () => {
+    // Auto-play the loop video when it's loaded
+    if (loopVideoRef.current) {
+      loopVideoRef.current.play()
     }
   }
   return (
@@ -75,24 +121,43 @@ export default function Hero() {
               <div className="w-full h-full bg-radial-gradient from-[#D799FE3D] via-[#D799FE1A] to-transparent rounded-full blur-3xl"></div>
             </div>
             <div className="relative w-full min-h-[400px] sm:min-h-[500px] lg:min-h-[550px] flex items-center justify-center z-5 pt-4 sm:pt-8 lg:pt-16 pb-4 sm:pb-8 lg:pb-0">
-              {/* Tree Image with Overlay Bubbles */}
-              <div className="relative w-full h-full flex items-center justify-center">
-                {/* Show image on all screen sizes */}
-                <video
-                  ref={videoRef}
-                  src="/tree.mp4"
-                  muted
-                  autoPlay
-                  playsInline
-                  onLoadedData={handleVideoLoaded}
-                  className="w-full max-w-full h-auto object-contain min-h-[350px] sm:min-h-[450px]"
-                />
+                {/* Tree Image with Overlay Bubbles */}
+                <div className="relative w-full h-full flex items-center justify-center">
+                  {/* Loop video - treeloop.mp4 (background) */}
+                  <video
+                    ref={loopVideoRef}
+                    src="/treeloop.mp4"
+                    muted
+                    playsInline
+                    loop
+                    onLoadedData={handleLoopVideoLoaded}
+                    onError={(e) => console.error('Loop video error:', e)}
+                    className={`absolute w-full max-w-full h-auto object-contain min-h-[350px] sm:min-h-[450px] transition-opacity duration-1000 ease-in-out ${
+                      isPlayingLoop ? 'opacity-100' : 'opacity-0'
+                    }`}
+                    style={{ zIndex: 1 }}
+                  />
+                  
+                  {/* First video - tree.mp4 (foreground) */}
+                  <video
+                    ref={videoRef}
+                    src="/tree.mp4"
+                    muted
+                    autoPlay
+                    playsInline
+                    onLoadedData={handleVideoLoaded}
+                    onEnded={handleVideoEnded}
+                    className={`w-full max-w-full h-auto object-contain min-h-[350px] sm:min-h-[450px] transition-opacity duration-1000 ease-in-out ${
+                      isPlayingLoop ? 'opacity-0' : 'opacity-100'
+                    }`}
+                    style={{ zIndex: 2 }}
+                  />
                 
                 {/* Interactive Bubbles Overlay - Hidden on mobile, shown on sm+ */}
-                <div className="hidden sm:block">
+                <div className="hidden sm:block absolute inset-0 z-30 pointer-events-none">
                   <BubbleOverlay
                     text="Provide AI Compute"
-                    position="top-[60px] sm:top-[80px] lg:top-[90px] left-[5px] sm:left-[10px] lg:left-[10px]"
+                    position="top-[20%] left-[5%]"
                     lineImage="/linesmallinvertedflipped.png"
                     lineWidth={80}
                     lineHeight={30}
@@ -102,7 +167,7 @@ export default function Hero() {
 
                   <BubbleOverlay
                     text="Earn Rewards"
-                    position="top-[130px] sm:top-[170px] lg:top-[190px] right-[5px] sm:right-[10px] lg:right-[10px]"
+                    position="top-[30%] right-[5%]"
                     lineImage="/linesmall.png"
                     lineWidth={80}
                     lineHeight={30}
@@ -112,12 +177,12 @@ export default function Hero() {
 
                   <BubbleOverlay
                     text="Join the Revolution"
-                    position="top-[220px] sm:top-[300px] lg:top-[340px] left-[30px] sm:left-[60px] lg:left-[100px] transform"
+                    position="top-[40%] left-[15%]"
                     lineImage="/linesmallinverted.png"
                     lineWidth={80}
                     lineHeight={30}
                     linePosition="top-[-5px] lg:top-[15px] left-[110px] sm:left-[140px] lg:left-[235px]"
-                    isVisible={isVideoCompleted}
+                    isVisible={isVideoCompleted || isPlayingLoop}
                   />
                 </div>
               </div>
