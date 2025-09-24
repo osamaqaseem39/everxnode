@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Link from 'next/link'
 
 export default function Whitelisting() {
   return (
@@ -96,9 +97,11 @@ export default function Whitelisting() {
 
         {/* Main Call to Action */}
         <div className="text-center">
-          <button className="bg-gradient-to-r from-[#CA5DE5] to-[#5B5B5B] text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full text-sm sm:text-base md:text-lg font-semibold hover:from-[#B54DD4] hover:to-[#4A4A4A] transition-all duration-300 transform hover:scale-105 shadow-[0_0_10px_#CA5DE5] hover:shadow-[0_0_20px_#CA5DE5]">
-            Join the Whitelist
-          </button>
+          <Link href="/whitelisting" className="inline-block">
+            <button className="bg-gradient-to-r from-[#CA5DE5] to-[#5B5B5B] text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full text-sm sm:text-base md:text-lg font-semibold hover:from-[#B54DD4] hover:to-[#4A4A4A] transition-all duration-300 transform hover:scale-105 shadow-[0_0_10px_#CA5DE5] hover:shadow-[0_0_20px_#CA5DE5]">
+              Join the Whitelist
+            </button>
+          </Link>
         </div>
       </div>
     </section>
